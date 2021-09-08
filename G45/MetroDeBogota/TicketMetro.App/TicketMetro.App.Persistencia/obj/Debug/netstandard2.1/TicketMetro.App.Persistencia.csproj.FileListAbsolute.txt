@@ -1,0 +1,12 @@
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\obj\Debug\netstandard2.1\TicketMetro.App.Persistencia.csprojAssemblyReference.cache
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\obj\Debug\netstandard2.1\TicketMetro.App.Persistencia.AssemblyInfoInputs.cache
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\obj\Debug\netstandard2.1\TicketMetro.App.Persistencia.AssemblyInfo.cs
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\obj\Debug\netstandard2.1\TicketMetro.App.Persistencia.csproj.CoreCompileInputs.cache
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\bin\Debug\netstandard2.1\TicketMetro.App.Persistencia.deps.json
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\bin\Debug\netstandard2.1\TicketMetro.App.Persistencia.dll
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\bin\Debug\netstandard2.1\TicketMetro.App.Persistencia.pdb
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\bin\Debug\netstandard2.1\TicketMetro.App.Dominio.dll
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\bin\Debug\netstandard2.1\TicketMetro.App.Dominio.pdb
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\obj\Debug\netstandard2.1\TicketMetro.App.Persistencia.csproj.CopyComplete
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\obj\Debug\netstandard2.1\TicketMetro.App.Persistencia.dll
+D:\MetroDeBogota\TicketMetro.App\TicketMetro.App.Persistencia\obj\Debug\netstandard2.1\TicketMetro.App.Persistencia.pdb
