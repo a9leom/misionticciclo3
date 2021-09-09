@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RedSocialPerros.App.Persistencia;
 
 namespace RedSocialPerros.App.Persistencia.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20210909022543_CambioFea")]
+    partial class CambioFea
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,16 +59,10 @@ namespace RedSocialPerros.App.Persistencia.Migrations
                     b.Property<string>("nombre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("numero_registro")
-                        .HasColumnType("int");
-
                     b.Property<string>("raza")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("numero_registro")
-                        .IsUnique();
 
                     b.ToTable("Perros");
                 });
@@ -78,22 +74,20 @@ namespace RedSocialPerros.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("cedula")
-                        .HasColumnType("int");
-
                     b.Property<double>("edad")
                         .HasColumnType("float");
 
                     b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("perroId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("cedula")
-                        .IsUnique();
+                    b.HasIndex("nombre")
+                        .IsUnique()
+                        .HasFilter("[nombre] IS NOT NULL");
 
                     b.HasIndex("perroId");
 

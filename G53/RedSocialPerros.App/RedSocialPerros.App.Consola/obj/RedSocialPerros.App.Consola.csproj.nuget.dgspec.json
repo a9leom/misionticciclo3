@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\RedSocialPerros.App.Consola.csproj": {}
+    "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\RedSocialPerros.App.Consola.csproj": {}
   },
   "projects": {
-    "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\RedSocialPerros.App.Consola.csproj": {
+    "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\RedSocialPerros.App.Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\RedSocialPerros.App.Consola.csproj",
+        "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\RedSocialPerros.App.Consola.csproj",
         "projectName": "RedSocialPerros.App.Consola",
-        "projectPath": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\RedSocialPerros.App.Consola.csproj",
+        "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\RedSocialPerros.App.Consola.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\obj\\",
+        "outputPath": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,11 +25,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj": {
-                "projectPath": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj"
+              "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj": {
+                "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj"
               },
-              "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\RedSocialPerros.App.Persistencia.csproj": {
-                "projectPath": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\RedSocialPerros.App.Persistencia.csproj"
+              "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\RedSocialPerros.App.Persistencia.csproj": {
+                "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\RedSocialPerros.App.Persistencia.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj": {
+    "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj",
+        "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj",
         "projectName": "RedSocialPerros.App.Dominio",
-        "projectPath": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj",
+        "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\obj\\",
+        "outputPath": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -122,14 +122,14 @@
         }
       }
     },
-    "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\RedSocialPerros.App.Persistencia.csproj": {
+    "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\RedSocialPerros.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\RedSocialPerros.App.Persistencia.csproj",
+        "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\RedSocialPerros.App.Persistencia.csproj",
         "projectName": "RedSocialPerros.App.Persistencia",
-        "projectPath": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\RedSocialPerros.App.Persistencia.csproj",
+        "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\RedSocialPerros.App.Persistencia.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\obj\\",
+        "outputPath": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -143,8 +143,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj": {
-                "projectPath": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj"
+              "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj": {
+                "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Dominio\\RedSocialPerros.App.Dominio.csproj"
               }
             }
           }

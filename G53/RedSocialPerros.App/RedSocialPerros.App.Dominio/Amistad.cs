@@ -5,6 +5,6 @@ namespace RedSocialPerros.App.Dominio{
         public int Id  { get; set; }
         public Perro perroA {get; set; }
         public Perro perroB {get; set; }
-        public string fecha_amistad { get; set; }
+        public DateTime fecha_amistad { get; set; }
     }
 }

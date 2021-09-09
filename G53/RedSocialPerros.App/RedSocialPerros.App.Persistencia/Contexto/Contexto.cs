@@ -15,7 +15,10 @@ namespace RedSocialPerros.App.Persistencia{
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Persona>()
-                .HasIndex(u => u.nombre)
+                .HasIndex(u => u.cedula)
+                .IsUnique();
+            builder.Entity<Perro>()
+                .HasIndex(u => u.numero_registro)
                 .IsUnique();
         }      
     }

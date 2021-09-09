@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NpsLdghh4O8UT3qY6RYOjLF15J6ghamSpC6E0qMKh9t6ezfBbqpklNa2XVxVCHkNb26187uU6xTlWlDhth9UZg==",
+  "dgSpecHash": "8ym9t+F2t4Ok7rI1Cw/EPRQ+YOebS8sU2TY5MN2vwGnnhY2qDfduf7G9zS4iiad3lB/U01mGVmITvvbKfX+JBA==",
   "success": true,
-  "projectFilePath": "D:\\Mintic\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\RedSocialPerros.App.Consola.csproj",
+  "projectFilePath": "D:\\Mintic\\misionticciclo3\\G53\\RedSocialPerros.App\\RedSocialPerros.App.Consola\\RedSocialPerros.App.Consola.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carde\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\carde\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
