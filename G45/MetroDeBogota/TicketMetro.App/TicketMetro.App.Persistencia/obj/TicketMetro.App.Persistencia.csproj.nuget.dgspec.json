@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj": {}
+    "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj": {}
   },
   "projects": {
-    "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj": {
+    "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj",
+        "projectUniqueName": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj",
         "projectName": "TicketMetro.App.Dominio",
-        "projectPath": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj",
+        "projectPath": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\obj\\",
+        "outputPath": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj": {
+    "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj",
+        "projectUniqueName": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj",
         "projectName": "TicketMetro.App.Persistencia",
-        "projectPath": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj",
+        "projectPath": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\obj\\",
+        "outputPath": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -78,8 +78,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj": {
-                "projectPath": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj"
+              "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj": {
+                "projectPath": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj"
               }
             }
           }
