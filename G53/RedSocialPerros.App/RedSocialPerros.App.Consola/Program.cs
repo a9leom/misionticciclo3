@@ -17,6 +17,8 @@ namespace RedSocialPerros.App.Consola
                 Console.WriteLine("1. Ingresar un perro");
                 Console.WriteLine("2. Ingresar una persona");
                 Console.WriteLine("3. Ingresar una amistad");
+                Console.WriteLine("4. Consultar perros");
+                Console.WriteLine("5. Consultar personas");
                 Console.WriteLine("Escriba -1 para salir");
                 opcion = Convert.ToInt32(Console.ReadLine());
 
@@ -106,6 +108,19 @@ namespace RedSocialPerros.App.Consola
                         }
                         catch{
                             Console.WriteLine("El perro no existe en la base de datos");
+                        }
+                        break;
+                    case 4:
+                        var listaPerros = objContexto.Perros;
+                        foreach (var perro in listaPerros){
+                            Console.WriteLine("Nombre "+perro.nombre+" Número registro "+perro.numero_registro+" Edad "+perro.edad);
+                        }
+                        break;
+                    case 5:
+                        var listaPersonas = objContexto.Personas.Include("perro");
+
+                        foreach(var persona in listaPersonas){
+                            Console.WriteLine("Nombre "+persona.nombre+" Edad "+persona.edad+" Cedula "+persona.cedula+" Perro "+persona.perro.nombre+" -- "+persona.perro.numero_registro);
                         }
                         break;
                     default:
