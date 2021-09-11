@@ -6,5 +6,6 @@ namespace TicketMetro.App.Dominio{
         public string nombre{get; set;}
         public double latitud{get; set;}
         public double longitud{get; set;}
+        public string cod_estacion{get; set;}
     }
 }

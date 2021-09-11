@@ -10,8 +10,9 @@ namespace TicketMetro.App.Consola
     {
         static void Main(string[] args)
         {
-            var objContexto = new Contexto();
+            
             while(true){
+                var objContexto = new Contexto();
                 Console.WriteLine("Ingrese la opción");
                 Console.WriteLine("1. Ingresar estación");
                 Console.WriteLine("2. Ingresar persona");
@@ -46,6 +47,8 @@ namespace TicketMetro.App.Consola
 
                         break;
                     case 2:
+                        Console.WriteLine("Ingrese la cedula");
+                        int cedula = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Ingrese el nombre de la persona");
                         string nombrePersona = Console.ReadLine();
                         Console.WriteLine("Ingrese el apellido");
@@ -56,19 +59,25 @@ namespace TicketMetro.App.Consola
                         Persona objPersona = new Persona(){
                             nombre = nombrePersona,
                             apellido = apellidoPersona,
-                            direccion = direccionPersona
+                            direccion = direccionPersona,
+                            cedula = cedula
                         };
+                        try{
+                            objContexto.Add(objPersona);
+                            objContexto.SaveChanges();
+                        }
+                        catch{
+                            Console.WriteLine("La cedula ya está registrada en el sistema.");
+                        }
 
-                        objContexto.Add(objPersona);
-                        objContexto.SaveChanges();
 
                         break;
                     case 3:
 
                             try{
-                                Console.WriteLine("Ingrese el nombre de la persona");
-                                string personaABuscar = Console.ReadLine();
-                                var persona = objContexto.Personas.Where(p => p.nombre == personaABuscar).Single();
+                                Console.WriteLine("Ingrese la cedula de la persona");
+                                cedula = Convert.ToInt32(Console.ReadLine());
+                                var persona = objContexto.Personas.Where(p => p.cedula == cedula).Single();
                             
                                 Console.WriteLine("Ingrese el nombre de la estación inicial");
                                 string nombre_estacion_inicial = Console.ReadLine(); 
@@ -83,8 +92,16 @@ namespace TicketMetro.App.Consola
                                 Console.WriteLine("Ingrese el precio (int) del ticket");
                                 int precio_total = Convert.ToInt32(Console.ReadLine());
 
-                                Console.WriteLine("Ingrese la fecha del ticket");
-                                string fecha_ticket = Console.ReadLine();
+                                Console.WriteLine("Ingrese el año del ticket");
+                                int anio = Convert.ToInt32(Console.ReadLine());
+
+                                Console.WriteLine("Ingrese el mes del ticket");
+                                int mes = Convert.ToInt32(Console.ReadLine());
+
+                                Console.WriteLine("Ingrese el día del ticket");
+                                int dia = Convert.ToInt32(Console.ReadLine());
+
+                                DateTime fecha_ticket = new DateTime(anio,mes,dia);
 
                                 Ticket objTicket = new Ticket(){
                                     objPersona = persona,

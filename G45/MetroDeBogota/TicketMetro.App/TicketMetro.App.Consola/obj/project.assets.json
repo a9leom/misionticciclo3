@@ -5802,11 +5802,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Consola\\TicketMetro.App.Consola.csproj",
+      "projectUniqueName": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Consola\\TicketMetro.App.Consola.csproj",
       "projectName": "TicketMetro.App.Consola",
-      "projectPath": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Consola\\TicketMetro.App.Consola.csproj",
+      "projectPath": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Consola\\TicketMetro.App.Consola.csproj",
       "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-      "outputPath": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Consola\\obj\\",
+      "outputPath": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5820,11 +5820,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj": {
-              "projectPath": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj"
+            "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj": {
+              "projectPath": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Dominio\\TicketMetro.App.Dominio.csproj"
             },
-            "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj": {
-              "projectPath": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj"
+            "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj": {
+              "projectPath": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Persistencia\\TicketMetro.App.Persistencia.csproj"
             }
           }
         }
