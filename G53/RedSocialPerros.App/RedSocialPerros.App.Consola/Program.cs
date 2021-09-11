@@ -53,12 +53,60 @@ namespace RedSocialPerros.App.Consola
                         Console.WriteLine("Ingrese la edad  de la persona");
                         edad = Convert.ToInt32(Console.ReadLine());
 
-                        Console.WriteLine("Ingrese el número de registro del perro de esta persona");
-                        int registro_perro = Convert.ToInt32(Console.ReadLine());
+                        try{
+                            Console.WriteLine("Ingrese el número de registro del perro de esta persona");
+                            int registro_perro = Convert.ToInt32(Console.ReadLine());
+                            Perro objPerro = objContexto.Perros.Where(p => p.numero_registro == registro_perro).Single();
 
+                            Persona objPersonaA = new Persona(){
+                                nombre =nombre_persona,
+                                cedula = cedula,
+                                edad = edad,
+                                perro = objPerro
+                            };     
+                            objContexto.Add(objPersonaA);
+                        }
+                        catch{
+                            Console.WriteLine("El perro no existe en la base de datos");
+                        }
                         
                         break;
                     case 3:
+                        try{ 
+                            Console.WriteLine("Ingrese el número de registro del perro número 1");
+                            int registro_perroA = Convert.ToInt32(Console.ReadLine());
+                            objPerroA = objContexto.Perros.Where(p => p.numero_registro == registro_perroA).Single();
+
+                            Console.WriteLine("Ingrese el número de registro del perro número 1");
+                            int registro_perroB = Convert.ToInt32(Console.ReadLine());
+                            Perro objPerroB = objContexto.Perros.Where(p => p.numero_registro == registro_perroB).Single();
+
+                            if(registro_perroB == registro_perroA){
+                                Console.WriteLine("Los números de registro no pueden ser iguales");
+                            }
+                            else{
+                                Console.WriteLine("Indique el año de inicio de la amistad");
+                                int anio = Convert.ToInt32(Console.ReadLine());
+
+                                Console.WriteLine("Indique el mes de inicio de la amistad");
+                                int mes = Convert.ToInt32(Console.ReadLine());
+
+                                Console.WriteLine("Indique el día de inicio de la amistad");
+                                int dia = Convert.ToInt32(Console.ReadLine());
+
+                                DateTime fecha = new DateTime(anio,mes,dia);
+
+                                Amistad objAmistad = new Amistad(){
+                                    perroA = objPerroA,
+                                    perroB = objPerroB,
+                                    fecha_amistad = fecha
+                                };
+                                objContexto.Add(objAmistad);
+                            }
+                        }
+                        catch{
+                            Console.WriteLine("El perro no existe en la base de datos");
+                        }
                         break;
                     default:
                         break;
