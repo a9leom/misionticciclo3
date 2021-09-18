@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Consola\\ReservaRestaurante.App.Consola.csproj": {}
+    "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Consola\\ReservaRestaurante.App.Consola.csproj": {}
   },
   "projects": {
-    "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Consola\\ReservaRestaurante.App.Consola.csproj": {
+    "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Consola\\ReservaRestaurante.App.Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Consola\\ReservaRestaurante.App.Consola.csproj",
+        "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Consola\\ReservaRestaurante.App.Consola.csproj",
         "projectName": "ReservaRestaurante.App.Consola",
-        "projectPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Consola\\ReservaRestaurante.App.Consola.csproj",
+        "projectPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Consola\\ReservaRestaurante.App.Consola.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Consola\\obj\\",
+        "outputPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,11 +25,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj": {
-                "projectPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj"
+              "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj": {
+                "projectPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj"
               },
-              "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\ReservaRestaurante.App.Persistencia.csproj": {
-                "projectPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\ReservaRestaurante.App.Persistencia.csproj"
+              "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\ReservaRestaurante.App.Persistencia.csproj": {
+                "projectPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\ReservaRestaurante.App.Persistencia.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj": {
+    "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj",
+        "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj",
         "projectName": "ReservaRestaurante.App.Dominio",
-        "projectPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj",
+        "projectPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\obj\\",
+        "outputPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -122,14 +122,14 @@
         }
       }
     },
-    "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\ReservaRestaurante.App.Persistencia.csproj": {
+    "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\ReservaRestaurante.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\ReservaRestaurante.App.Persistencia.csproj",
+        "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\ReservaRestaurante.App.Persistencia.csproj",
         "projectName": "ReservaRestaurante.App.Persistencia",
-        "projectPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\ReservaRestaurante.App.Persistencia.csproj",
+        "projectPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\ReservaRestaurante.App.Persistencia.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\obj\\",
+        "outputPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -143,8 +143,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj": {
-                "projectPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj"
+              "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj": {
+                "projectPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj"
               }
             }
           }
@@ -175,6 +175,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.0, )"
             }

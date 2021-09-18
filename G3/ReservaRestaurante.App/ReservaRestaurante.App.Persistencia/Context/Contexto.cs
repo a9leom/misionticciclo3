@@ -10,7 +10,9 @@ namespace ReservaRestaurante.App.Persistencia{
 
         protected override void OnConfiguring(DbContextOptionsBuilder opciones) {
             if(!opciones.IsConfigured){
-                opciones.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog=ReservaRestaurante");
+                //opciones.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog=ReservaRestaurante");
+                 opciones.UseMySQL("server=localhost;database=reserva;user=cardel;password=cardelMintic");
+
             }
         }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj": {}
+    "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj": {}
   },
   "projects": {
-    "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj": {
+    "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj",
+        "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj",
         "projectName": "ReservaRestaurante.App.Dominio",
-        "projectPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj",
+        "projectPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\ReservaRestaurante.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\Mintic\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\obj\\",
+        "outputPath": "D:\\Mintic\\misionticciclo3\\G3\\ReservaRestaurante.App\\ReservaRestaurante.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"

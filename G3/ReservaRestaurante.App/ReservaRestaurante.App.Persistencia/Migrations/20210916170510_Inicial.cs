@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+using MySql.EntityFrameworkCore.Metadata;
 
 namespace ReservaRestaurante.App.Persistencia.Migrations
 {
@@ -7,19 +9,19 @@ namespace ReservaRestaurante.App.Persistencia.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "CLientes",
+                name: "Clientes",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     cedula = table.Column<int>(type: "int", nullable: false),
-                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    nombre = table.Column<string>(type: "text", nullable: true),
+                    apellido = table.Column<string>(type: "text", nullable: true),
                     edad = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CLientes", x => x.Id);
+                    table.PrimaryKey("PK_Clientes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -27,10 +29,10 @@ namespace ReservaRestaurante.App.Persistencia.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     numero = table.Column<int>(type: "int", nullable: false),
-                    ubicacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    categoria = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ubicacion = table.Column<string>(type: "text", nullable: true),
+                    categoria = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -42,10 +44,10 @@ namespace ReservaRestaurante.App.Persistencia.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     cedula = table.Column<int>(type: "int", nullable: false),
-                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    nombre = table.Column<string>(type: "text", nullable: true),
+                    apellido = table.Column<string>(type: "text", nullable: true),
                     edad = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -58,18 +60,19 @@ namespace ReservaRestaurante.App.Persistencia.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     clienteId = table.Column<int>(type: "int", nullable: true),
                     meseroId = table.Column<int>(type: "int", nullable: true),
-                    mesaId = table.Column<int>(type: "int", nullable: true)
+                    mesaId = table.Column<int>(type: "int", nullable: true),
+                    fecha = table.Column<DateTime>(type: "datetime", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Reservas", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Reservas_CLientes_clienteId",
+                        name: "FK_Reservas_Clientes_clienteId",
                         column: x => x.clienteId,
-                        principalTable: "CLientes",
+                        principalTable: "Clientes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -87,9 +90,15 @@ namespace ReservaRestaurante.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CLientes_cedula",
-                table: "CLientes",
+                name: "IX_Clientes_cedula",
+                table: "Clientes",
                 column: "cedula",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Mesas_numero",
+                table: "Mesas",
+                column: "numero",
                 unique: true);
 
             migrationBuilder.CreateIndex(
@@ -120,7 +129,7 @@ namespace ReservaRestaurante.App.Persistencia.Migrations
                 name: "Reservas");
 
             migrationBuilder.DropTable(
-                name: "CLientes");
+                name: "Clientes");
 
             migrationBuilder.DropTable(
                 name: "Mesas");

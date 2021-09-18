@@ -2,7 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReservaRestaurante.App.Persistencia;
@@ -10,26 +9,24 @@ using ReservaRestaurante.App.Persistencia;
 namespace ReservaRestaurante.App.Persistencia.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210907134424_Inicial")]
+    [Migration("20210916170510_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .UseIdentityColumns()
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
             modelBuilder.Entity("ReservaRestaurante.App.Dominio.Cliente", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("apellido")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<int>("cedula")
                         .HasColumnType("int");
@@ -38,33 +35,35 @@ namespace ReservaRestaurante.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
                     b.HasIndex("cedula")
                         .IsUnique();
 
-                    b.ToTable("CLientes");
+                    b.ToTable("Clientes");
                 });
 
             modelBuilder.Entity("ReservaRestaurante.App.Dominio.Mesa", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("categoria")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<int>("numero")
                         .HasColumnType("int");
 
                     b.Property<string>("ubicacion")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("numero")
+                        .IsUnique();
 
                     b.ToTable("Mesas");
                 });
@@ -73,11 +72,10 @@ namespace ReservaRestaurante.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("apellido")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<int>("cedula")
                         .HasColumnType("int");
@@ -86,7 +84,7 @@ namespace ReservaRestaurante.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -100,11 +98,13 @@ namespace ReservaRestaurante.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<int?>("clienteId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("fecha")
+                        .HasColumnType("datetime");
 
                     b.Property<int?>("mesaId")
                         .HasColumnType("int");

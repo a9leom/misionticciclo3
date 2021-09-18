@@ -1,8 +1,6 @@
 ﻿using System;
 using RedSocialPerros.App.Dominio;
 using RedSocialPerros.App.Persistencia;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
 
 namespace RedSocialPerros.App.Consola
 {
@@ -10,7 +8,6 @@ namespace RedSocialPerros.App.Consola
     {
         static void Main(string[] args)
         {
-            Contexto objContexto = new Contexto();
             int opcion = 0;
             while(opcion!=-1){
                 Console.WriteLine("Seleccione una opción");
@@ -21,6 +18,8 @@ namespace RedSocialPerros.App.Consola
                 Console.WriteLine("5. Consultar personas");
                 Console.WriteLine("Escriba -1 para salir");
                 opcion = Convert.ToInt32(Console.ReadLine());
+
+                IRepositorioPerro objRepositorioperro = new RepositorioPerro(new Contexto());
 
                 switch (opcion){
                     case 1:
@@ -42,11 +41,13 @@ namespace RedSocialPerros.App.Consola
                             edad = edad,
                             raza = raza
                         };  
-                        objContexto.Add(objPerroA);  
-                                        
+                        var respuesta = objRepositorioperro.agregarPerro(objPerroA);        
+                        if(respuesta==null){
+                            Console.WriteLine("Ha intentado agregar un perro con el mismo número de registro");
+                        }
                         break;
                     case 2:
-                        Console.WriteLine("Ingrese el número de cedula de la persona");
+                        /*Console.WriteLine("Ingrese el número de cedula de la persona");
                         int cedula = Convert.ToInt32(Console.ReadLine());
 
                         Console.WriteLine("Ingrese el nombre  de la persona");
@@ -66,16 +67,15 @@ namespace RedSocialPerros.App.Consola
                                 edad = edad,
                                 perro = objPerro
                             };     
-                            objContexto.Add(objPersonaA);
                         }
                         catch{
                             Console.WriteLine("El perro no existe en la base de datos");
                         }
-                        
+                        */
                         break;
                     case 3:
                         try{ 
-                            Console.WriteLine("Ingrese el número de registro del perro número 1");
+                            /*Console.WriteLine("Ingrese el número de registro del perro número 1");
                             int registro_perroA = Convert.ToInt32(Console.ReadLine());
                             objPerroA = objContexto.Perros.Where(p => p.numero_registro == registro_perroA).Single();
 
@@ -104,76 +104,36 @@ namespace RedSocialPerros.App.Consola
                                     fecha_amistad = fecha
                                 };
                                 objContexto.Add(objAmistad);
-                            }
+                                
+                            }*/
                         }
                         catch{
                             Console.WriteLine("El perro no existe en la base de datos");
                         }
                         break;
                     case 4:
-                        var listaPerros = objContexto.Perros;
+                        /*var listaPerros = objContexto.Perros;
                         foreach (var perro in listaPerros){
                             Console.WriteLine("Nombre "+perro.nombre+" Número registro "+perro.numero_registro+" Edad "+perro.edad);
-                        }
+                        }*/
                         break;
                     case 5:
-                        var listaPersonas = objContexto.Personas.Include("perro");
+                        /*var listaPersonas = objContexto.Personas.Include("perro");
 
                         foreach(var persona in listaPersonas){
                             Console.WriteLine("Nombre "+persona.nombre+" Edad "+persona.edad+" Cedula "+persona.cedula+" Perro "+persona.perro.nombre+" -- "+persona.perro.numero_registro);
-                        }
+                        }*/
                         break;
                     default:
                         break;
                 }
                 try{
-                    objContexto.SaveChanges();
+                    //objContexto.SaveChanges();
                 }
                 catch{
                     Console.WriteLine("El registro ya está en la base de datos");
                 }
             }
-            /*Console.WriteLine("Ingrese 1 si desea agregar los datos por primera vez");
-            int opcion = Convert.ToInt32(Console.ReadLine());
-            if(opcion ==1){
-                Perro objPerroA = new Perro(){
-                    nombre = "Simón",
-                    edad = 12,
-                    raza = "French Poodle"
-                };
-                objContexto.Add(objPerroA);
-                Perro objPerroB = new Perro(){
-                    nombre = "Max Power",
-                    edad = 2,
-                    raza = "Criollo"
-                }; 
-                objContexto.Add(objPerroB);
-                Persona objPersonaA = new Persona(){
-                    nombre = "Carlos",
-                    edad = 34,
-                    perro = objPerroA
-                };     
-                objContexto.Add(objPersonaA);
-                Persona objPersonaB = new Persona(){
-                    nombre = "Maria la del barrio",
-                    edad = 50,
-                    perro = objPerroB
-                }; 
-                objContexto.Add(objPersonaB);
-                Amistad objAmistad = new Amistad(){
-                    perroA = objPerroA,
-                    perroB = objPerroB,
-                    fecha_amistad = "01/01/2019"
-                };
-                objContexto.Add(objAmistad);
-                objContexto.SaveChanges();
-            }
-
-            var personas = objContexto.Personas.Include("perro");
-
-            foreach(Persona persona in personas){
-                Console.WriteLine("Nombre "+persona.nombre+" Edad "+persona.edad+" Perro "+persona.perro.nombre+" "+persona.perro.edad);
-            }*/
         }
     }
 }
