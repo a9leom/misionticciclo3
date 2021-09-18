@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XviuxevUWWu0NclAYEBCjaCi3NagRIp6pglQ8bsNcSCjodm96fpYN/DVIHWwPl/T3edEtvtDlz1nRMMPAaVr8g==",
+  "dgSpecHash": "P2jqeRxYUaP5wR/fnvlpkhEe1MWjfLxjq9BH+cM+6GmjJp6C0NcJTvMNV+6jvfsaekGvvyiI4tdF+cXnhfWaPg==",
   "success": true,
-  "projectFilePath": "D:\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Consola\\TicketMetro.App.Consola.csproj",
+  "projectFilePath": "D:\\mintic\\misionticciclo3\\G45\\MetroDeBogota\\TicketMetro.App\\TicketMetro.App.Consola\\TicketMetro.App.Consola.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carde\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\carde\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -10,7 +10,7 @@ namespace TicketMetro.App.Dominio{
 
         public int precio { get; set; }
 
-        public string fecha { get; set; }
+        public DateTime fecha { get; set; }
     }
 
 }

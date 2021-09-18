@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TicketMetro.App.Persistencia;
 
 namespace TicketMetro.App.Persistencia.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20210911112418_Fechas")]
+    partial class Fechas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,9 +28,6 @@ namespace TicketMetro.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("cod_estacion")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<double>("latitud")
                         .HasColumnType("float");
 
@@ -39,10 +38,6 @@ namespace TicketMetro.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("cod_estacion")
-                        .IsUnique()
-                        .HasFilter("[cod_estacion] IS NOT NULL");
 
                     b.ToTable("Estaciones");
                 });
@@ -57,9 +52,6 @@ namespace TicketMetro.App.Persistencia.Migrations
                     b.Property<string>("apellido")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("cedula")
-                        .HasColumnType("int");
-
                     b.Property<string>("direccion")
                         .HasColumnType("nvarchar(max)");
 
@@ -67,9 +59,6 @@ namespace TicketMetro.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("cedula")
-                        .IsUnique();
 
                     b.ToTable("Personas");
                 });

@@ -7,5 +7,6 @@ namespace TicketMetro.App.Dominio{
         public string nombre{get; set; }
         public string apellido{get; set; }
         public string direccion{get; set; }
+        public int cedula{get; set; }
     }
 }

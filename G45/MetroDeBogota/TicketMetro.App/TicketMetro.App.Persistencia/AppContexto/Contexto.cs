@@ -14,5 +14,15 @@ namespace TicketMetro.App.Persistencia{
             }
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Persona>()
+                .HasIndex(u => u.cedula)
+                .IsUnique();
+            builder.Entity<Estacion>()
+                .HasIndex(u => u.cod_estacion)
+                .IsUnique();
+        }       
+
     }
 }
