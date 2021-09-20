@@ -9,6 +9,7 @@ namespace HospitalEnCasa.app.Persistencia
     {
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Medico> Medicos { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             if (!options.IsConfigured)
@@ -21,6 +22,8 @@ namespace HospitalEnCasa.app.Persistencia
             builder.Entity<Persona>()
                 .HasIndex(u => u.cedula)
                 .IsUnique();
+            builder.Entity<Medico>()
+                .Property(t => t.tarjeta_profesional).HasColumnName("tarjeta_profesional").IsRequired();
         }
 
 

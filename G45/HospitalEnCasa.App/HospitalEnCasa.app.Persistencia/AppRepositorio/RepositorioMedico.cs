@@ -1,6 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using HospitalEnCasa.app.Dominio;
 namespace HospitalEnCasa.app.Persistencia{
     public class RepositorioMedico : IRepositorioMedico
     {
@@ -26,7 +27,7 @@ namespace HospitalEnCasa.app.Persistencia{
                 medicoEncontrado.edad = medico.edad;
                 medicoEncontrado.genero = medico.genero;
                 medicoEncontrado.nombre_hospital =  medico.nombre_hospital;
-                medico.tarjeta_profesional = medico.tarjeta_profesional;
+                medicoEncontrado.tarjeta_profesional = medico.tarjeta_profesional;
                 _contexto.SaveChanges();
             }
             return medicoEncontrado;
@@ -36,6 +37,12 @@ namespace HospitalEnCasa.app.Persistencia{
         public IEnumerable<Medico> getMedicos()
         {
             return _contexto.Medicos;
+        }
+
+        public Medico obtenerMedico(int cedula)
+        {
+            var medicoEncontrado = _contexto.Medicos.Where(x => x.cedula == cedula).FirstOrDefault();
+            return medicoEncontrado;
         }
 
         public void removeMedico(int cedula)
