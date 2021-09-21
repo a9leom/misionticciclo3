@@ -8,12 +8,18 @@ namespace HospitalEnCasa.app.Persistencia
     public class Contexto : DbContext
     {
         public DbSet<Persona> Personas { get; set; }
+        public DbSet<Medico> Medicos { get; set; }
+        public DbSet<Paciente> Pacientes {get; set; }
+        public DbSet<Enfermera> Enfermeras{get; set; }
+        public DbSet<Familiar_Designado> Familiares_Designados {get; set;}
+        public DbSet<Historia> historias{get; set;}
+        public DbSet<Anotacion> anotaciones{get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             if (!options.IsConfigured)
             {
-                options.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = HospitalEnCasaG53");
+                options.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = HospitalEnCasaG3");
             }
         }
         protected override void OnModelCreating(ModelBuilder builder)

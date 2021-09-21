@@ -1,7 +1,7 @@
 ﻿using System;
 using HospitalEnCasa.app.Dominio;
 using HospitalEnCasa.app.Persistencia;
-
+using System.Linq;
 
 namespace HospitalEnCasa.App.Consola
 {
@@ -9,27 +9,27 @@ namespace HospitalEnCasa.App.Consola
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Escriba el nombre");
-            string name = Console.ReadLine();  
-            Console.WriteLine("Escriba la edad");
-            int year = Convert.ToInt32(Console.ReadLine());
-            Persona obj = new Persona(){
-                
-                nombre = name,             
-                edad = year
-            };
-            
-            var context= new Contexto();
-            context.Add(obj);
-            
-            context.SaveChanges();
-            Console.WriteLine(obj.nombre);
+            Contexto _contexto = new Contexto();
+            var historias = _contexto.historias
+                .Join(
+                    _contexto.anotaciones,
+                    historia => new {iD = historia.anotacion},
+                    anotacion => new {Id = anotacion.Id},
+                    (historia,anotacion) => 
+                    new {
+                        historiaID = historia.Id,
+                        fecha = historia.fecha,
+                        enfermera = anotacion.enfermera,
+                        paciente = anotacion.paciente,
+                        medico = anotacion.medico,
+                        descripcion = anotacion.descripcion,
+                        formula_medica = anotacion.formula_medica,
+                    }
 
-                    //Consultar
-            var personas = context.Personas;
-        
-            foreach(var persona in personas){
-                Console.WriteLine(persona.nombre+" "+persona.edad);
+                ).toList();
+
+            foreach (var historia in historias){
+                Console.WriteLine(historia);
             }
         }
 
