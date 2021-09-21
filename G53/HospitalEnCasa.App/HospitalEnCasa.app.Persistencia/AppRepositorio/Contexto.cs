@@ -8,7 +8,10 @@ namespace HospitalEnCasa.app.Persistencia
     public class Contexto : DbContext
     {
         public DbSet<Persona> Personas { get; set; }
-
+        public DbSet<Medico> Medicos { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
+        public DbSet<Enfermera> Enfermeras { get; set; }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             if (!options.IsConfigured)
