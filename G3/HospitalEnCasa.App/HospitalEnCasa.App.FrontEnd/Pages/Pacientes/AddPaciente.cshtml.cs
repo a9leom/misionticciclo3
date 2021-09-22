@@ -6,6 +6,7 @@ using HospitalEnCasa.app.Dominio;
 using HospitalEnCasa.app.Persistencia;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HospitalEnCasa.App.FrontEnd.Pages
 {
@@ -17,10 +18,9 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
 
         private readonly IRepositorioEnfermera repositorioEnfermera;
         public Paciente paciente {get; set; }
-        public IEnumerable<Paciente> pacientes {get; set; }
-        public IEnumerable<Medico> medicos {get; set; }
-        public IEnumerable<Familiar_Designado> familiares {get; set;}
-        public IEnumerable<Enfermera> enfermeras {get; set;}
+        
+        public IEnumerable<SelectListItem> medicos { get; set; }
+        public int cedulaMedico{get; set;}
         public AddPacienteModel(IRepositorioPaciente repositorioPaciente,IRepositorioMedico repositorioMedico, IRepositorioFamiliarDesignado repositorioFamiliarDesignado, IRepositorioEnfermera repositorioEnfermera){
             this.repositorioPaciente = repositorioPaciente;
             this.repositorioMedico = repositorioMedico;
@@ -30,16 +30,24 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
         public void OnGet()
         {
             paciente = new Paciente();
-            medicos = repositorioMedico.getAllMedicos();
-            enfermeras = repositorioEnfermera.getAllEnfermeras();
-            familiares = repositorioFamiliarDesignado.getAllFamiliarDesignados();
+            medicos = repositorioMedico.getAllMedicos().Select(
+                a => new SelectListItem { 
+                    Value = Convert.ToString(a.cedula),
+                    Text = a.nombre
+                }
+            ).ToList();
         }
 
-        public IActionResult OnPost(Paciente paciente){
+        public IActionResult OnPost(Paciente paciente, int cedulaMedico
+        ){
+            Medico medico = repositorioMedico.getMedico(cedulaMedico);   
             try{
                 repositorioPaciente.addPaciente(paciente);
+                paciente.medico = medico;
+                repositorioPaciente.editPaciente(paciente);
                 return RedirectToPage("./ListPaciente");
-            }catch{
+            }catch(Exception e){
+                Console.WriteLine(e);
                 return RedirectToPage("../Error");
             }
         }
