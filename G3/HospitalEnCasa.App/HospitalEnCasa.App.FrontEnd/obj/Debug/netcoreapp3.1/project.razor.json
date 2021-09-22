@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Pacientes\\ListPaciente.cshtml",
+      "TargetPath": "Pages\\Pacientes\\ListPaciente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Enfermeras\\ListEnfermera.cshtml",
       "TargetPath": "Pages\\Enfermeras\\ListEnfermera.cshtml",
       "FileKind": "mvc"
@@ -14427,8 +14432,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Familiares\\AddFamiliar.cshtml",
+      "TargetPath": "Pages\\Familiares\\AddFamiliar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Pacientes\\RemovePaciente.cshtml",
+      "TargetPath": "Pages\\Pacientes\\RemovePaciente.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14437,8 +14452,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Pacientes\\DetailPaciente.cshtml",
+      "TargetPath": "Pages\\Pacientes\\DetailPaciente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Pacientes\\AddPaciente.cshtml",
+      "TargetPath": "Pages\\Pacientes\\AddPaciente.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14472,8 +14497,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Familiares\\ListFamiliar.cshtml",
+      "TargetPath": "Pages\\Familiares\\ListFamiliar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Enfermeras\\RemoveEnfermera.cshtml",
       "TargetPath": "Pages\\Enfermeras\\RemoveEnfermera.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Familiares\\RemoveFamiliar.cshtml",
+      "TargetPath": "Pages\\Familiares\\RemoveFamiliar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Familiares\\EditFamiliar.cshtml",
+      "TargetPath": "Pages\\Familiares\\EditFamiliar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Familiares\\DetailFamiliar.cshtml",
+      "TargetPath": "Pages\\Familiares\\DetailFamiliar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Pacientes\\EditPaciente.cshtml",
+      "TargetPath": "Pages\\Pacientes\\EditPaciente.cshtml",
       "FileKind": "mvc"
     },
     {

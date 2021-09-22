@@ -13,6 +13,7 @@ namespace HospitalEnCasa.app.Persistencia{
         public Familiar_Designado addFamiliarDesignado(Familiar_Designado familiar)
         {
             Familiar_Designado familiarNew = _contexto.Add(familiar).Entity;
+            _contexto.SaveChanges();
             return familiarNew;
         }
 

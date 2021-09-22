@@ -12,6 +12,7 @@ namespace HospitalEnCasa.app.Persistencia{
         public Paciente addPaciente(Paciente paciente)
         {
             Paciente pacienteNuevo = _contexto.Add(paciente).Entity;
+            _contexto.SaveChanges();
             return pacienteNuevo;
         }
 

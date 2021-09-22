@@ -91,3 +91,13 @@ D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\
 D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Enfermeras\EditEnfermera.cshtml.g.cs
 D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Enfermeras\ListEnfermera.cshtml.g.cs
 D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Enfermeras\RemoveEnfermera.cshtml.g.cs
+D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Pacientes\AddPaciente.cshtml.g.cs
+D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Pacientes\DetailPaciente.cshtml.g.cs
+D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Pacientes\EditPaciente.cshtml.g.cs
+D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Pacientes\ListPaciente.cshtml.g.cs
+D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Pacientes\RemovePaciente.cshtml.g.cs
+D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\AddFamiliar.cshtml.g.cs
+D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\DetailFamiliar.cshtml.g.cs
+D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\EditFamiliar.cshtml.g.cs
+D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\ListFamiliar.cshtml.g.cs
+D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\RemoveFamiliar.cshtml.g.cs

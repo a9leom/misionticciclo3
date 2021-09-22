@@ -41,26 +41,27 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public IEnumerable<Historia> historiaPorEnfermera(Enfermera enfermera)
         {
-            throw new NotImplementedException();
-            
-            
-
-            
+            IEnumerable<Historia> historias = _contexto.historias.Where(h => h.anotacion.enfermera.Id == enfermera.Id).Include("anotacionId");
+            return historias;  
         }
 
         public IEnumerable<Historia> historiaPorFechaYPaciente(DateTime fecha_inicio, DateTime fecha_final, Paciente paciente)
         {
-            throw new NotImplementedException();
+            IEnumerable<Historia> historias = _contexto.historias.Where(h => h.fecha >= fecha_inicio & h.fecha <= fecha_final & h.anotacion.paciente.Id >= paciente.Id).Include("anotacionId");      
+            return historias;  
         }
 
         public IEnumerable<Historia> historiaPorMedico(Medico medico)
         {
-            throw new NotImplementedException();
+            IEnumerable<Historia> historias = _contexto.historias.Where(h => h.anotacion.medico.Id == medico.Id).Include("anotacionId");
+            return historias;
         }
 
         public IEnumerable<Historia> historiaPorPaciente(Paciente paciente)
         {
-            throw new NotImplementedException();
+            IEnumerable<Historia> historias = _contexto.historias.Where(h => h.anotacion.paciente.Id == paciente.Id).Include("anotacionId");
+            return historias;
+            
         }
 
         public void RemoveHistoria(int id)
