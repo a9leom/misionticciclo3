@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\GestorPacientes\\ListPaciente.cshtml",
+      "TargetPath": "Pages\\GestorPacientes\\ListPaciente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\GestorMedicos\\CrearMedico.cshtml",
       "TargetPath": "Pages\\GestorMedicos\\CrearMedico.cshtml",
       "FileKind": "mvc"
@@ -14414,6 +14419,11 @@
     {
       "FilePath": "d:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\GestorEnfermeras\\EditarEnfermera.cshtml",
       "TargetPath": "Pages\\GestorEnfermeras\\EditarEnfermera.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\GestorFamiliares\\ListFamiliar.cshtml",
+      "TargetPath": "Pages\\GestorFamiliares\\ListFamiliar.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14434,6 +14444,11 @@
     {
       "FilePath": "d:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\GestorPacientes\\AddPaciente.cshtml",
+      "TargetPath": "Pages\\GestorPacientes\\AddPaciente.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14459,6 +14474,11 @@
     {
       "FilePath": "d:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\GestorMedicos\\EditarMedico.cshtml",
       "TargetPath": "Pages\\GestorMedicos\\EditarMedico.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\GestorFamiliares\\AddFamiliar.cshtml",
+      "TargetPath": "Pages\\GestorFamiliares\\AddFamiliar.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HospitalEnCasa.app.Persistencia.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210921013825_Inicial")]
+    [Migration("20210923011242_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,56 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
+
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Anotacion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("enfermeraId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("medicoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("pacienteId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("enfermeraId");
+
+                    b.HasIndex("medicoId");
+
+                    b.HasIndex("pacienteId");
+
+                    b.ToTable("Anotaciones");
+                });
+
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Historia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("anotacionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("fecha")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("anotacionId");
+
+                    b.ToTable("Historias");
+                });
 
             modelBuilder.Entity("HospitalEnCasa.app.Dominio.Persona", b =>
                 {
@@ -68,6 +118,25 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.HasDiscriminator().HasValue("Enfermera");
                 });
 
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Familiar", b =>
+                {
+                    b.HasBaseType("HospitalEnCasa.app.Dominio.Persona");
+
+                    b.Property<string>("direccion")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Familiar_direccion");
+
+                    b.Property<int>("latitud")
+                        .HasColumnType("int")
+                        .HasColumnName("Familiar_latitud");
+
+                    b.Property<int>("longitud")
+                        .HasColumnType("int")
+                        .HasColumnName("Familiar_longitud");
+
+                    b.HasDiscriminator().HasValue("Familiar");
+                });
+
             modelBuilder.Entity("HospitalEnCasa.app.Dominio.Medico", b =>
                 {
                     b.HasBaseType("HospitalEnCasa.app.Dominio.Persona");
@@ -91,6 +160,9 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.Property<int?>("enfermeraId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("familiarId")
+                        .HasColumnType("int");
+
                     b.Property<int>("latitud")
                         .HasColumnType("int");
 
@@ -102,12 +174,14 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
 
                     b.HasIndex("enfermeraId");
 
+                    b.HasIndex("familiarId");
+
                     b.HasIndex("medicoId");
 
                     b.HasDiscriminator().HasValue("Paciente");
                 });
 
-            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Paciente", b =>
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Anotacion", b =>
                 {
                     b.HasOne("HospitalEnCasa.app.Dominio.Enfermera", "enfermera")
                         .WithMany()
@@ -117,7 +191,43 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                         .WithMany()
                         .HasForeignKey("medicoId");
 
+                    b.HasOne("HospitalEnCasa.app.Dominio.Paciente", "paciente")
+                        .WithMany()
+                        .HasForeignKey("pacienteId");
+
                     b.Navigation("enfermera");
+
+                    b.Navigation("medico");
+
+                    b.Navigation("paciente");
+                });
+
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Historia", b =>
+                {
+                    b.HasOne("HospitalEnCasa.app.Dominio.Anotacion", "anotacion")
+                        .WithMany()
+                        .HasForeignKey("anotacionId");
+
+                    b.Navigation("anotacion");
+                });
+
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Paciente", b =>
+                {
+                    b.HasOne("HospitalEnCasa.app.Dominio.Enfermera", "enfermera")
+                        .WithMany()
+                        .HasForeignKey("enfermeraId");
+
+                    b.HasOne("HospitalEnCasa.app.Dominio.Familiar", "familiar")
+                        .WithMany()
+                        .HasForeignKey("familiarId");
+
+                    b.HasOne("HospitalEnCasa.app.Dominio.Medico", "medico")
+                        .WithMany()
+                        .HasForeignKey("medicoId");
+
+                    b.Navigation("enfermera");
+
+                    b.Navigation("familiar");
 
                     b.Navigation("medico");
                 });

@@ -7,5 +7,7 @@ namespace HospitalEnCasa.app.Dominio
         public int longitud {get; set; }
         public Medico medico {get; set; }
         public Enfermera enfermera {get; set; }
+
+        public Familiar familiar { get; set; }
     }
 }
