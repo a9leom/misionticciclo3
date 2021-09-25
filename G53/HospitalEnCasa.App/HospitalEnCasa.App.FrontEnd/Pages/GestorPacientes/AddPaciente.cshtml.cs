@@ -72,7 +72,8 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
 
                 return RedirectToPage("./ListPaciente");
             }
-            catch{
+            catch(Exception e){
+                Console.WriteLine(e);
                 return RedirectToPage("../Error");
             }
         }

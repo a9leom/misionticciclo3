@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.Consola\\HospitalEnCasa.App.Consola.csproj": {}
+    "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.Consola\\HospitalEnCasa.App.Consola.csproj": {}
   },
   "projects": {
-    "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.Consola\\HospitalEnCasa.App.Consola.csproj": {
+    "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.Consola\\HospitalEnCasa.App.Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.Consola\\HospitalEnCasa.App.Consola.csproj",
+        "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.Consola\\HospitalEnCasa.App.Consola.csproj",
         "projectName": "HospitalEnCasa.App.Consola",
-        "projectPath": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.Consola\\HospitalEnCasa.App.Consola.csproj",
+        "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.Consola\\HospitalEnCasa.App.Consola.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.Consola\\obj\\",
+        "outputPath": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.App.Consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,8 +25,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj": {
-                "projectPath": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj"
+              "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj": {
+                "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj": {
+    "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj",
+        "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj",
         "projectName": "HospitalEnCasa.app.Dominio",
-        "projectPath": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj",
+        "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\obj\\",
+        "outputPath": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -119,14 +119,14 @@
         }
       }
     },
-    "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj": {
+    "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj",
+        "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj",
         "projectName": "HospitalEnCasa.app.Persistencia",
-        "projectPath": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj",
+        "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj",
         "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-        "outputPath": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\obj\\",
+        "outputPath": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -140,8 +140,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj": {
-                "projectPath": "D:\\mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj"
+              "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj": {
+                "projectPath": "D:\\Mintic\\misionticciclo3\\G53\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj"
               }
             }
           }

@@ -18,7 +18,7 @@
       <th scope="col">Longitud</th>
       <th scope="col">Latitud</th>
       <th scope="col">Familiar</th>
-      <th scope="col">paciente</th>
+      <th scope="col">Médico</th>
       <th scope="col">Enfermera</th>   
     </tr>
   </thead>
@@ -31,9 +31,9 @@
         <td>@paciente.direccion</td>
         <td>@paciente.longitud</td>
         <td>@paciente.latitud</td>
-        <td>@paciente.familiar</td>
-        <td>@paciente.medico</td>
-        <td>@paciente.enfermera</td>       
+        <td>@paciente.familiar.nombre @paciente.familiar.direccion</td>
+        <td>@paciente.medico.nombre @paciente.medico.edad</td>
+        <td>@paciente.enfermera.nombre @paciente.enfermera.hospital</td>       
     </tr>
 }
 </table>
