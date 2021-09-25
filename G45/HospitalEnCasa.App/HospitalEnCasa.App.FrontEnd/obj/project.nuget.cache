@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LBztxi+l9Dr0uiBYgscB7knwgMOZvOycTfbDmvHwUodnCzQpmenMm//KL08CKsevO4wXZh/aSraG7fvA47jdnw==",
+  "dgSpecHash": "lbpcqp1L89fR8g7zPAOST5opDjU505Xww4FB+tgsSuiwnsqrwW8Pjskzcm3ElLu6J5uWFXArZyv26bWWZd0sTQ==",
   "success": true,
-  "projectFilePath": "D:\\mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\HospitalEnCasa.App.FrontEnd.csproj",
+  "projectFilePath": "D:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\HospitalEnCasa.App.FrontEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carde\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\carde\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

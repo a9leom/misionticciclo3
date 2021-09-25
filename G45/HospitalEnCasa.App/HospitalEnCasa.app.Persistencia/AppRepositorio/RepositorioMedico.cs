@@ -19,7 +19,7 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public Medico editMedico(Medico medico)
         {
-            var medicoEncontrado = _contexto.Medicos.Where(x => x.cedula == medico.cedula).FirstOrDefault();
+            var medicoEncontrado = _contexto.Medicos.Where(x => x.Id == medico.Id).FirstOrDefault();
 
             if(medicoEncontrado != null){
                 medicoEncontrado.cedula = medico.cedula;

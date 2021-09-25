@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BebZIWIOSBCwRkCnpcsP0goLWJdxFpDJPrGDXFIyjnF5Sp43weE06hqWzaTvibaNWzS3y8Hl5X/bE7gDk5CM6Q==",
+  "dgSpecHash": "S7N4MqodkakRTBtFtNR8o6zFUVIjQWdbwuarXw5b3xrZrpjN9nI0xctabK4C73p8Wt5qZlpYa+6cNhUZ3b6D4Q==",
   "success": true,
-  "projectFilePath": "D:\\mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj",
+  "projectFilePath": "D:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carde\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\carde\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",

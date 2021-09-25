@@ -87,3 +87,10 @@ D:\mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj
 D:\mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\CrearMedico.cshtml.g.cs
 D:\mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\bin\Debug\netcoreapp3.1\Humanizer.dll
 D:\mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Enfermera\AddEnfermera.cshtml.g.cs
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Enfermera\DetailEnfermera.cshtml.g.cs
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Enfermera\EditEnfermera.cshtml.g.cs
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Enfermera\ListEnfermera.cshtml.g.cs
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Enfermera\RemoveEnfermera.cshtml.g.cs
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Familiar\AddFamiliar.cshtml.g.cs
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Familiar\ListFamiliar.cshtml.g.cs

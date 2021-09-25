@@ -25,8 +25,10 @@ namespace HospitalEnCasa.app.Persistencia{
                 pacienteAEditar.genero = paciente.genero;
                 pacienteAEditar.latitud = paciente.latitud;
                 pacienteAEditar.longitud = paciente.longitud;
-                pacienteAEditar.medico_asignado = paciente.medico_asignado;
+                pacienteAEditar.medico = paciente.medico;
                 pacienteAEditar.nombre = paciente.nombre;
+                pacienteAEditar.familiar = paciente.familiar;
+                pacienteAEditar.enfermera = paciente.enfermera;
                 _contexto.SaveChanges();
             }
             return pacienteAEditar;
