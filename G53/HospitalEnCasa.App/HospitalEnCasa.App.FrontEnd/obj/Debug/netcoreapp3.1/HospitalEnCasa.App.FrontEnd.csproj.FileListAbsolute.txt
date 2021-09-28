@@ -95,3 +95,6 @@ D:\mintic\misionticciclo3\G53\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj
 D:\mintic\misionticciclo3\G53\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\GestorFamiliares\ListFamiliar.cshtml.g.cs
 D:\mintic\misionticciclo3\G53\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\GestorPacientes\AddPaciente.cshtml.g.cs
 D:\mintic\misionticciclo3\G53\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\GestorPacientes\ListPaciente.cshtml.g.cs
+D:\Mintic\misionticciclo3\G53\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\GestorFamiliares\DetailFamiliar.cshtml.g.cs
+D:\Mintic\misionticciclo3\G53\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\GestorFamiliares\EditFamiliar.cshtml.g.cs
+D:\Mintic\misionticciclo3\G53\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\GestorFamiliares\RemoveFamiliar.cshtml.g.cs
