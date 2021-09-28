@@ -153,6 +153,7 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.HasBaseType("HospitalEnCasa.app.Dominio.Persona");
 
                     b.Property<string>("direccion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("enfermeraId")

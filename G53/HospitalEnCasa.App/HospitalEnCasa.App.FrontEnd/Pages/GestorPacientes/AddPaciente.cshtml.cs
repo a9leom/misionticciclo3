@@ -56,25 +56,30 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
         }
 
         public ActionResult OnPost(Paciente paciente, int cedulaMedico, int cedulaEnfermera, int cedulaFamiliar){
-            try{
-                Enfermera enfermera = repositorioEnfermera.getEnfermera(cedulaEnfermera);
-                Medico medico = repositorioMedico.getMedico(cedulaMedico);
-                Familiar familiar = repositorioFamiliar.getFamiliar(cedulaFamiliar);
+            if(ModelState.IsValid){
+                try{
+                    Enfermera enfermera = repositorioEnfermera.getEnfermera(cedulaEnfermera);
+                    Medico medico = repositorioMedico.getMedico(cedulaMedico);
+                    Familiar familiar = repositorioFamiliar.getFamiliar(cedulaFamiliar);
 
-                //Se agrega tal cual, por problema del framework al intentar editar el objeto el ID se establece
-                repositorioPaciente.addPaciente(paciente);
+                    //Se agrega tal cual, por problema del framework al intentar editar el objeto el ID se establece
+                    repositorioPaciente.addPaciente(paciente);
 
-                paciente.medico = medico;
-                paciente.familiar = familiar;
-                paciente.enfermera = enfermera;
+                    paciente.medico = medico;
+                    paciente.familiar = familiar;
+                    paciente.enfermera = enfermera;
 
-                repositorioPaciente.editPaciente(paciente);
+                    repositorioPaciente.editPaciente(paciente);
 
-                return RedirectToPage("./ListPaciente");
+                    return RedirectToPage("./ListPaciente");
+                }
+                catch(Exception e){
+                    Console.WriteLine(e);
+                    return RedirectToPage("../Error");
+                }
             }
-            catch(Exception e){
-                Console.WriteLine(e);
-                return RedirectToPage("../Error");
+            else{
+                return RedirectToPage("./AddPaciente");
             }
         }
     }

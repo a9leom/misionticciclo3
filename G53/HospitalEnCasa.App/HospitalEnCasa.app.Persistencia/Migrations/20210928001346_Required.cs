@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace HospitalEnCasa.app.Persistencia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Required : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

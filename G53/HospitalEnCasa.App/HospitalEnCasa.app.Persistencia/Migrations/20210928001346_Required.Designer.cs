@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HospitalEnCasa.app.Persistencia.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210925013851_Inicial")]
-    partial class Inicial
+    [Migration("20210928001346_Required")]
+    partial class Required
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -155,6 +155,7 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.HasBaseType("HospitalEnCasa.app.Dominio.Persona");
 
                     b.Property<string>("direccion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("enfermeraId")
