@@ -89,15 +89,30 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.Property<int>("edad")
                         .HasColumnType("int");
 
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("genero")
                         .HasColumnType("int");
 
                     b.Property<string>("nombre")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("cedula")
+                        .IsUnique();
+
+                    b.HasIndex("username")
                         .IsUnique();
 
                     b.ToTable("Personas");
@@ -110,11 +125,15 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.HasBaseType("HospitalEnCasa.app.Dominio.Persona");
 
                     b.Property<string>("hospital")
-                        .HasColumnType("nvarchar(max)")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
                         .HasColumnName("Enfermera_hospital");
 
                     b.Property<string>("informacion_laboral")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasDiscriminator().HasValue("Enfermera");
                 });
@@ -124,6 +143,7 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.HasBaseType("HospitalEnCasa.app.Dominio.Persona");
 
                     b.Property<string>("direccion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Familiar_Designado_direccion");
 
@@ -159,6 +179,7 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.HasBaseType("HospitalEnCasa.app.Dominio.Persona");
 
                     b.Property<string>("direccion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("enfermeraId")

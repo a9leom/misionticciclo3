@@ -22,13 +22,19 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
         }
 
         public IActionResult OnPost(Medico medico){
-            try{
-                repositorioMedico.addMedico(medico);
-                return RedirectToPage("./ListMedicos");
+            if(ModelState.IsValid){
+                try{
+                    repositorioMedico.addMedico(medico);
+                    return RedirectToPage("./ListMedicos");
+                }
+                catch{
+                    return RedirectToPage("../Error");
+                }
             }
-            catch{
-                return RedirectToPage("../Error");
+            else{
+                return Page();
             }
+
         }
     }
 }

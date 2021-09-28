@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using HospitalEnCasa.app.Dominio;
@@ -5,13 +6,19 @@ using HospitalEnCasa.app.Dominio;
 namespace HospitalEnCasa.app.Persistencia{
     public class RepositorioEnfermera : IRepositorioEnfermera
     {
-        public readonly Contexto _contexto;
+        private readonly Contexto _contexto;
+        private readonly Security security;
 
         public RepositorioEnfermera(Contexto context){
             this._contexto = context;
+            security = new Security();
         }
         public Enfermera addEnfermera(Enfermera enfermera)
         {
+            String password = enfermera.password;
+            password = security.GetMD5Hash(password);
+            enfermera.password = password;
+            
             Enfermera newEnfermera = _contexto.Add(enfermera).Entity;
             _contexto.SaveChanges();
             return newEnfermera;
@@ -20,6 +27,10 @@ namespace HospitalEnCasa.app.Persistencia{
         public Enfermera editEnfermera(Enfermera enfermera)
         {
             Enfermera enfermeraEncontrada = _contexto.Enfermeras.FirstOrDefault(e => e.Id == enfermera.Id);
+            String password = enfermera.password;
+            password = security.GetMD5Hash(password);
+            enfermera.password = password;
+            
             if(enfermeraEncontrada != null){
                 enfermeraEncontrada.cedula = enfermera.cedula;
                 enfermeraEncontrada.nombre = enfermera.nombre;
@@ -27,6 +38,9 @@ namespace HospitalEnCasa.app.Persistencia{
                 enfermeraEncontrada.genero = enfermera.genero;
                 enfermeraEncontrada.hospital = enfermera.hospital;
                 enfermeraEncontrada.informacion_laboral = enfermera.informacion_laboral;
+                enfermeraEncontrada.email = enfermera.email;
+                enfermeraEncontrada.password = enfermera.password;
+                enfermeraEncontrada.username = enfermera.username;
                 _contexto.SaveChanges();
             }
             return enfermeraEncontrada;

@@ -37,6 +37,18 @@
         <input asp-for="familiar.latitud" class="form-control" value="">
     </div> 
     <div class="form-group row">
+        <label asp-for="familiar.username" class="col-sm-2">Nombre de usuario</label>
+        <input asp-for="familiar.username" class="form-control" value="">
+    </div> 
+    <div class="form-group row">
+        <label asp-for="familiar.email" class="col-sm-2">Correo electrónico</label>
+        <input asp-for="familiar.email" class="form-control" value="">
+    </div> 
+    <div class="form-group row">
+        <label asp-for="familiar.password" class="col-sm-2">Contraseña</label>
+        <input asp-for="familiar.password" class="form-control" value="">
+    </div> 
+    <div class="form-group row">
         <button type="submit" class="btn btn-primary">Guardar</button>
         <a asp-page="./ListFamiliar" class="btn btn-primary">Cancelar</a>
     </div>

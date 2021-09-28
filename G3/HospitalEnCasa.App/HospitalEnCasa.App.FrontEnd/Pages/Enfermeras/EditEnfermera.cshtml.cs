@@ -14,20 +14,31 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
         private readonly IRepositorioEnfermera repositorioEnfermera;
         public Enfermera enfermera { get; set; }
 
-        public EditEnfermeraModel(IRepositorioEnfermera repositorioEnfermera){
+        public EditEnfermeraModel(IRepositorioEnfermera repositorioEnfermera)
+        {
             this.repositorioEnfermera = repositorioEnfermera;
         }
         public void OnGet(int cedula)
         {
             enfermera = repositorioEnfermera.getEnfermera(cedula);
         }
-        public IActionResult OnPost(Enfermera enfermera){
-            try{
-                repositorioEnfermera.editEnfermera(enfermera);
-                return RedirectToPage("./ListEnfermera");
+        public IActionResult OnPost(Enfermera enfermera)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    repositorioEnfermera.editEnfermera(enfermera);
+                    return RedirectToPage("./ListEnfermera");
+                }
+                catch
+                {
+                    return RedirectToPage("../Error");
+                }
             }
-            catch{
-                return RedirectToPage("../Error");
+            else
+            {
+                return Page();
             }
         }
     }

@@ -31,7 +31,19 @@
     <div class="form-group row">
         <label asp-for="medico.tarjeta_profesional" class="col-sm-2">Tarjeta profesional</label>
         <input asp-for="medico.tarjeta_profesional" class="form-control"  required>
+    </div> 
+    <div class="form-group row">
+        <label asp-for="medico.username" class="col-sm-2">Username</label>
+        <input asp-for="medico.username" class="form-control" required>
     </div>  
+    <div class="form-group row">
+        <label asp-for="medico.password" class="col-sm-2">Contraseña</label>
+        <input asp-for="medico.password" class="form-control" required>
+    </div>  
+    <div class="form-group row">
+        <label asp-for="medico.email" class="col-sm-2">Email</label>
+        <input asp-for="medico.email" class="form-control" required>
+    </div>   
     <div class="form-group row">
         <button type="submit" class="btn btn-primary">Guardar</button>
         <a asp-page="./ListaMedicos" class="btn btn-primary">Cancelar</a>

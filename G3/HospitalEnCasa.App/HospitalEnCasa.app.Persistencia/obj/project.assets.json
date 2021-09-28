@@ -2153,6 +2153,9 @@
       "HospitalEnCasa.app.Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/HospitalEnCasa.app.Dominio.dll": {}
         },
@@ -7492,11 +7495,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj",
+      "projectUniqueName": "D:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj",
       "projectName": "HospitalEnCasa.app.Persistencia",
-      "projectPath": "D:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj",
+      "projectPath": "D:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\HospitalEnCasa.app.Persistencia.csproj",
       "packagesPath": "C:\\Users\\carde\\.nuget\\packages\\",
-      "outputPath": "D:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\obj\\",
+      "outputPath": "D:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.app.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -7510,8 +7513,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "D:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj": {
-              "projectPath": "D:\\mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj"
+            "D:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj": {
+              "projectPath": "D:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj"
             }
           }
         }

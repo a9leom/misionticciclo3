@@ -101,3 +101,5 @@ D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\
 D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\EditFamiliar.cshtml.g.cs
 D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\ListFamiliar.cshtml.g.cs
 D:\mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Familiares\RemoveFamiliar.cshtml.g.cs
+D:\Mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\bin\Debug\netcoreapp3.1\Humanizer.dll
+D:\Mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll

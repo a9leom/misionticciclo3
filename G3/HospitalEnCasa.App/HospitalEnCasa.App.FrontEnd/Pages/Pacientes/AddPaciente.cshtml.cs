@@ -17,11 +17,16 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
         private readonly IRepositorioFamiliarDesignado repositorioFamiliarDesignado;
 
         private readonly IRepositorioEnfermera repositorioEnfermera;
-        public Paciente paciente {get; set; }
-        
+        public Paciente paciente { get; set; }
+
         public IEnumerable<SelectListItem> medicos { get; set; }
-        public int cedulaMedico{get; set;}
-        public AddPacienteModel(IRepositorioPaciente repositorioPaciente,IRepositorioMedico repositorioMedico, IRepositorioFamiliarDesignado repositorioFamiliarDesignado, IRepositorioEnfermera repositorioEnfermera){
+        public IEnumerable<SelectListItem> enfermeras { get; set; }
+        public IEnumerable<SelectListItem> familiares { get; set; }
+        public int cedulaMedico { get; set; }
+        public int cedulaEnfermera { get; set;}
+        public int cedulaFamiliar { get; set; }
+        public AddPacienteModel(IRepositorioPaciente repositorioPaciente, IRepositorioMedico repositorioMedico, IRepositorioFamiliarDesignado repositorioFamiliarDesignado, IRepositorioEnfermera repositorioEnfermera)
+        {
             this.repositorioPaciente = repositorioPaciente;
             this.repositorioMedico = repositorioMedico;
             this.repositorioEnfermera = repositorioEnfermera;
@@ -31,25 +36,55 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
         {
             paciente = new Paciente();
             medicos = repositorioMedico.getAllMedicos().Select(
-                a => new SelectListItem { 
+                a => new SelectListItem
+                {
+                    Value = Convert.ToString(a.cedula),
+                    Text = a.nombre
+                }
+            ).ToList();
+            enfermeras = repositorioEnfermera.getAllEnfermeras().Select(
+                a => new SelectListItem
+                {
+                    Value = Convert.ToString(a.cedula),
+                    Text = a.nombre
+                }
+            ).ToList();
+            familiares = repositorioFamiliarDesignado.getAllFamiliarDesignados().Select(
+                a => new SelectListItem
+                {
                     Value = Convert.ToString(a.cedula),
                     Text = a.nombre
                 }
             ).ToList();
         }
 
-        public IActionResult OnPost(Paciente paciente, int cedulaMedico
-        ){
-            Medico medico = repositorioMedico.getMedico(cedulaMedico);   
-            try{
-                repositorioPaciente.addPaciente(paciente);
-                paciente.medico = medico;
-                repositorioPaciente.editPaciente(paciente);
-                return RedirectToPage("./ListPaciente");
-            }catch(Exception e){
-                Console.WriteLine(e);
-                return RedirectToPage("../Error");
+        public IActionResult OnPost(Paciente paciente, int cedulaMedico, int cedulaEnfermera, int cedulaFamiliar)
+        {
+            if (ModelState.IsValid)
+            {
+                Medico medico = repositorioMedico.getMedico(cedulaMedico);
+                Enfermera enfermera = repositorioEnfermera.getEnfermera(cedulaEnfermera);
+                Familiar_Designado familiar = repositorioFamiliarDesignado.getFamiliarDesignado(cedulaFamiliar);
+                try
+                {
+                    repositorioPaciente.addPaciente(paciente);
+                    paciente.medico = medico;
+                    paciente.enfermera = enfermera;
+                    paciente.familiar = familiar;
+                    repositorioPaciente.editPaciente(paciente);
+                    return RedirectToPage("./ListPaciente");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    return RedirectToPage("../Error");
+                }
             }
+            else
+            {
+                return Page();
+            }
+
         }
     }
 }

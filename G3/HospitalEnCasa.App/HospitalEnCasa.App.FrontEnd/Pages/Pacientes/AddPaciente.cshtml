@@ -38,16 +38,28 @@
         <input asp-for="paciente.longitud" class="form-control" value="" required>
     </div> 
     <div class="form-group row">
-        <label asp-for="paciente.familiar" class="col-sm-2">Familiar designado</label>
-        <input asp-for="paciente.familiar" class="form-control" value="" required>
+        <label asp-for="cedulaFamiliar" class="col-sm-2">Familiar designado</label>
+        <select asp-for="cedulaFamiliar" asp-items="Model.familiares"></select>
     </div> 
     <div class="form-group row">
         <label asp-for="cedulaMedico" class="col-sm-2">Médico</label>
        <select asp-for="cedulaMedico" asp-items="Model.medicos"></select>
     </div> 
     <div class="form-group row">
-        <label asp-for="paciente.enfermera" class="col-sm-2">Enfermera</label>
-        <input asp-for="paciente.enfermera" class="form-control" value="" required>
+        <label asp-for="cedulaEnfermera" class="col-sm-2">Enfermera</label>
+        <select asp-for="cedulaEnfermera" asp-items="Model.enfermeras"></select>
+    </div> 
+    <div class="form-group row">
+        <label asp-for="paciente.username" class="col-sm-2">Nombre de usuario</label>
+        <input asp-for="paciente.username" class="form-control" value="">
+    </div> 
+    <div class="form-group row">
+        <label asp-for="paciente.email" class="col-sm-2">Correo electrónico</label>
+        <input asp-for="paciente.email" class="form-control" value="">
+    </div> 
+    <div class="form-group row">
+        <label asp-for="paciente.password" class="col-sm-2">Contraseña</label>
+        <input asp-for="paciente.password" class="form-control" value="">
     </div> 
     <div class="form-group row">
         <button type="submit" class="btn btn-primary">Guardar</button>

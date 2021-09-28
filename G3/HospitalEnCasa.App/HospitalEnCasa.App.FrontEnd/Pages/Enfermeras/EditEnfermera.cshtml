@@ -31,7 +31,19 @@
     <div class="form-group row">
         <label asp-for="enfermera.informacion_laboral" class="col-sm-2">Información laboral</label>
         <input asp-for="enfermera.informacion_laboral" class="form-control">
+    </div> 
+    <div class="form-group row">
+        <label asp-for="enfermera.username" class="col-sm-2">Nombre de usuario</label>
+        <input asp-for="enfermera.username" class="form-control">
     </div>  
+    <div class="form-group row">
+        <label asp-for="enfermera.email" class="col-sm-2">Correo electrónico</label>
+        <input asp-for="enfermera.email" class="form-control">
+    </div>  
+    <div class="form-group row">
+        <label asp-for="enfermera.password" class="col-sm-2">Contraseña</label>
+        <input asp-for="enfermera.password" class="form-control">
+    </div>   
     <div class="form-group row">
         <button type="submit" class="btn btn-primary">Guardar</button>
         <a asp-page="./Listaenfermeras" class="btn btn-primary">Cancelar</a>

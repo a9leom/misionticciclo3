@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace HospitalEnCasa.app.Persistencia.Migrations
 {
-    public partial class Inicial2 : Migration
+    public partial class Unico : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,9 +17,12 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     edad = table.Column<int>(type: "int", nullable: false),
                     genero = table.Column<int>(type: "int", nullable: false),
+                    email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    username = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Enfermera_hospital = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    informacion_laboral = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Enfermera_hospital = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    informacion_laboral = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Familiar_Designado_direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Familiar_Designado_latitud = table.Column<int>(type: "int", nullable: true),
                     Familiar_Designado_longitud = table.Column<int>(type: "int", nullable: true),
@@ -151,6 +154,12 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                 name: "IX_Personas_medicoId",
                 table: "Personas",
                 column: "medicoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Personas_username",
+                table: "Personas",
+                column: "username",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

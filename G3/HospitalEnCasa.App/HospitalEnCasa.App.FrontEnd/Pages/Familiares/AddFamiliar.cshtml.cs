@@ -14,22 +14,33 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
     {
         private readonly IRepositorioFamiliarDesignado repositorioFamiliarDesignado;
 
-        public AddFamiliarModel(IRepositorioFamiliarDesignado repositorioFamiliarDesignado){
+        public AddFamiliarModel(IRepositorioFamiliarDesignado repositorioFamiliarDesignado)
+        {
             this.repositorioFamiliarDesignado = repositorioFamiliarDesignado;
         }
-            public Familiar_Designado familiar {get;set;}
+        public Familiar_Designado familiar { get; set; }
         public void OnGet()
         {
             familiar = new Familiar_Designado();
         }
 
-        public IActionResult OnPost(Familiar_Designado familiar){
-            try{
-                repositorioFamiliarDesignado.addFamiliarDesignado(familiar);
-                return RedirectToPage("./ListFamiliar");
+        public IActionResult OnPost(Familiar_Designado familiar)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    repositorioFamiliarDesignado.addFamiliarDesignado(familiar);
+                    return RedirectToPage("./ListFamiliar");
+                }
+                catch
+                {
+                    return RedirectToPage("../Error");
+                }
             }
-            catch{
-                return RedirectToPage("../Error");
+            else
+            {
+                return Page();
             }
         }
     }

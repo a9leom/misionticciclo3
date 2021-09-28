@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using HospitalEnCasa.app.Dominio;
 using HospitalEnCasa.app.Persistencia;
@@ -13,8 +14,9 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
     {
         private readonly IRepositorioEnfermera repositorioEnfermera;
         public Enfermera enfermera { get; set; }
-        
-        public AddEnfermeraModel(IRepositorioEnfermera repositorioEnfermera){
+
+        public AddEnfermeraModel(IRepositorioEnfermera repositorioEnfermera)
+        {
             this.repositorioEnfermera = repositorioEnfermera;
         }
         public void OnGet()
@@ -22,13 +24,23 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
             enfermera = new Enfermera();
         }
 
-        public IActionResult OnPost(Enfermera enfermera){
-            try{
-                repositorioEnfermera.addEnfermera(enfermera);
-                return RedirectToPage("./ListEnfermera");
+        public IActionResult OnPost(Enfermera enfermera)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    repositorioEnfermera.addEnfermera(enfermera);
+                    return RedirectToPage("./ListEnfermera");
+                }
+                catch
+                {
+                    return RedirectToPage("../Error");
+                }
             }
-            catch{
-                return RedirectToPage("../Error");
+            else
+            {
+                return Page();
             }
         }
     }

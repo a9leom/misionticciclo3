@@ -4,7 +4,7 @@
 }
 <h1>Gestionar Paciente</h1>
 <p>En está pagina podrás gestionar los pacientes</p>
-<a class="btn btn-primary table-btn" asp-page="./Addpaciente">Agregar médico</a>
+<a class="btn btn-primary table-btn" asp-page="./Addpaciente">Agregar Paciente</a>
 <table class="table table-dark">
 <tr>
     <th scope="col">Cedula</th>
@@ -15,7 +15,7 @@
     <th scope="col">Longitud</th>
     <th scope="col">Latitud</th>
     <th scope="col">Familiar designado</th>
-    <th scope="col">paciente</th>
+    <th scope="col">Médico</th>
     <th scope="col">Enfermera</th>
 </tr>
 @foreach(var paciente in Model.pacientes){
@@ -27,9 +27,9 @@
         <td>@paciente.direccion</td>
         <td>@paciente.longitud</td>
         <td>@paciente.latitud</td>
-        <td>@paciente.familiar</td>
-        <td>@paciente.medico</td>
-        <td>@paciente.enfermera</td>
+        <td>@paciente.familiar.nombre</td>
+        <td>@paciente.medico.nombre</td>
+        <td>@paciente.enfermera.nombre</td>
         <td><a class="btn btn-primary table-btn" asp-page="./Detailpaciente" asp-route-cedula="@paciente.cedula">Detalles</a><br>
         <a class="btn btn-primary table-btn" asp-page="./Editpaciente" asp-route-cedula="@paciente.cedula">Editar</a><br>
         <a class="btn btn-primary table-btn" asp-page="./Removepaciente" asp-route-cedula="@paciente.cedula">Eliminar</a>
