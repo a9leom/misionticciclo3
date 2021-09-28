@@ -8,5 +8,6 @@ namespace HospitalEnCasa.app.Persistencia{
         Paciente editarPaciente(Paciente paciente);
         void eliminarPaciente(int cedula);
         Paciente agregarPaciente(Paciente paciente);
+
     }
 }

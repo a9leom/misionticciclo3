@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using HospitalEnCasa.app.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace HospitalEnCasa.app.Persistencia{
     public class RepositorioEnfermera : IRepositorioEnfermera

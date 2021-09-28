@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using HospitalEnCasa.app.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace HospitalEnCasa.app.Persistencia{
     public class RepositorioPaciente : IRepositorioPaciente
@@ -44,15 +45,16 @@ namespace HospitalEnCasa.app.Persistencia{
             
         }
 
+
         public Paciente obtenerPaciente(int cedula)
         {
-            Paciente pacienteEncontrado = _contexto.Pacientes.FirstOrDefault(c => c.cedula == cedula);
+            Paciente pacienteEncontrado = _contexto.Pacientes.Include("medico").Include("enfermera").Include("familiar").FirstOrDefault(c => c.cedula == cedula);
             return pacienteEncontrado;
         }
 
         public IEnumerable<Paciente> obtenerPacientes()
         {
-            return _contexto.Pacientes;
+            return _contexto.Pacientes.Include("medico").Include("enfermera").Include("familiar");
         }
     }
 }
