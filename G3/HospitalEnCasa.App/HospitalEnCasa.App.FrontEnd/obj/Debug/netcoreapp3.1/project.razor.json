@@ -14402,6 +14402,11 @@
   "RootNamespace": "HospitalEnCasa.App.FrontEnd",
   "Documents": [
     {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Anotacion\\ListAnotacion.cshtml",
+      "TargetPath": "Pages\\Anotacion\\ListAnotacion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Medicos\\EditMedico.cshtml",
       "TargetPath": "Pages\\Medicos\\EditMedico.cshtml",
       "FileKind": "mvc"
@@ -14462,6 +14467,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Historia\\AddHistoria.cshtml",
+      "TargetPath": "Pages\\Historia\\AddHistoria.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Pacientes\\AddPaciente.cshtml",
       "TargetPath": "Pages\\Pacientes\\AddPaciente.cshtml",
       "FileKind": "mvc"
@@ -14484,6 +14494,11 @@
     {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Enfermeras\\AddEnfermera.cshtml",
       "TargetPath": "Pages\\Enfermeras\\AddEnfermera.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Historia\\ListHistoria.cshtml",
+      "TargetPath": "Pages\\Historia\\ListHistoria.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14529,6 +14544,11 @@
     {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Enfermeras\\EditEnfermera.cshtml",
       "TargetPath": "Pages\\Enfermeras\\EditEnfermera.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Anotacion\\AddAnotacion.cshtml",
+      "TargetPath": "Pages\\Anotacion\\AddAnotacion.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -41,7 +41,7 @@ namespace HospitalEnCasa.app.Persistencia
                 familiarAEditar.longitud = familiar.longitud;
                 familiarAEditar.latitud = familiar.latitud;
                 familiarAEditar.username = familiar.username;
-                familiarAEditar.password = familiar.password =
+                familiarAEditar.password = familiar.password;
                 familiarAEditar.email = familiar.email;
                 _contexto.SaveChanges();
             }

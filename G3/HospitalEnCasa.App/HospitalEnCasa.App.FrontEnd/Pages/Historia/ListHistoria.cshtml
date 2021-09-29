@@ -1,0 +1,24 @@
+﻿@page
+@model HospitalEnCasa.App.FrontEnd.ListHistoriaModel
+@{
+}
+<h1>Historias</h1>
+<a href="./AddHistoria" class="btn btn-primary">Añadir historia</a>
+<table class="table striped-table">
+    <tr>
+        <th>Fecha</th>
+        <th>Paciente</th>
+        <th>Medico</th>
+        <th>Enfermera</th>
+        <th>Descripción</th>
+    </tr>
+    @foreach(var historia in Model.historias){
+        <tr>
+            <td>@historia.fecha</td>
+            <td>@historia.anotacion.paciente.nombre</td>
+            <td>@historia.anotacion.medico.nombre</td>
+            <td>@historia.anotacion.enfermera.nombre</td>
+            <td>@historia.anotacion.descripcion</td>
+        </tr>
+    }
+</table>

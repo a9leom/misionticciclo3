@@ -14,7 +14,9 @@ namespace HospitalEnCasa.app.Persistencia{
         }
         public Historia addHistoria(Historia historia)
         {
-            return _contexto.Add(historia).Entity;
+            Historia historiaNueva =  _contexto.Add(historia).Entity;
+            _contexto.SaveChanges();
+            return historiaNueva;
         }
 
         public Historia editHistoria(Historia historia)
@@ -31,12 +33,12 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public IEnumerable<Historia> geAllHistoria()
         {
-            return _contexto.historias;
+            return _contexto.historias.Include("anotacion").Include("anotacion.paciente").Include("anotacion.medico").Include("anotacion.enfermera");
         }
 
         public Historia getHistoria(int id)
         {
-            return _contexto.historias.FirstOrDefault(h => h.Id == id);
+            return _contexto.historias.Include("anotacion").FirstOrDefault(h => h.Id == id);
         }
 
         public IEnumerable<Historia> historiaPorEnfermera(Enfermera enfermera)
