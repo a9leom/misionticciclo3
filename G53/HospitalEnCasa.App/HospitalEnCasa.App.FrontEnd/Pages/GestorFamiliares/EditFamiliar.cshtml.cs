@@ -12,8 +12,9 @@ namespace HospitalEnCasa.App.FrontEnd
     public class EditFamiliarModel : PageModel
     {
         private readonly IRepositorioFamiliar repositorioFamiliar;
-        public Familiar familiar {get; set; }
-        public EditFamiliarModel(IRepositorioFamiliar repositorio){
+        public Familiar familiar { get; set; }
+        public EditFamiliarModel(IRepositorioFamiliar repositorio)
+        {
             this.repositorioFamiliar = repositorio;
         }
         public void OnGet(int cedula)
@@ -21,13 +22,23 @@ namespace HospitalEnCasa.App.FrontEnd
             familiar = repositorioFamiliar.getFamiliar(cedula);
         }
 
-        public IActionResult OnPost(Familiar familiar){
-            try{
-                repositorioFamiliar.editFamiliar(familiar);
-                return RedirectToPage("./ListFamiliar");
+        public IActionResult OnPost(Familiar familiar)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    repositorioFamiliar.editFamiliar(familiar);
+                    return RedirectToPage("./ListFamiliar");
+                }
+                catch
+                {
+                    return RedirectToPage("../Error");
+                }
             }
-            catch{
-                return RedirectToPage("../Error");
+            else
+            {
+                return Page();
             }
         }
     }

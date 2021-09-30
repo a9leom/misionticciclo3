@@ -27,6 +27,12 @@ namespace HospitalEnCasa.app.Persistencia
             builder.Entity<Persona>()
                 .HasIndex(u => u.cedula)
                 .IsUnique();
+            builder.Entity<Persona>()
+                .HasIndex(u => u.username)
+                .IsUnique();
+            builder.Entity<Historia>()
+                .HasIndex(u => u.serial)
+                .IsUnique();
         }
 
 

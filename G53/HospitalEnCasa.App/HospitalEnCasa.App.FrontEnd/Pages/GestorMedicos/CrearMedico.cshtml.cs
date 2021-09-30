@@ -15,20 +15,27 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
         public Medico medico { get; set; }
         public CrearMedicoModel(IRepositorioMedico repositorioMedico){
             this.repositorioMedico = repositorioMedico;
+            Medico medico = new Medico();
         }
         public void OnGet()
         {
-            Medico medico = new Medico();
+            
         }
 
         public IActionResult OnPost(Medico medico){
-            try{
-                repositorioMedico.addMedico(medico);
-                return RedirectToPage("./ListMedico");
+            if(ModelState.IsValid){
+                try{
+                    repositorioMedico.addMedico(medico);
+                    return RedirectToPage("./ListMedico");
+                }
+                catch(Exception e){
+                    Console.WriteLine(e);
+                    return RedirectToPage("../Error");
+                }
+            }else{
+                return Page();
             }
-            catch{
-                return RedirectToPage("../Error");
-            }
+
         }
 
 

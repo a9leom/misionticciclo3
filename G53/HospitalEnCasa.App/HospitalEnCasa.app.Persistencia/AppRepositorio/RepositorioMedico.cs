@@ -7,12 +7,15 @@ namespace HospitalEnCasa.app.Persistencia
     public class RepositorioMedico : IRepositorioMedico
     {
         private readonly Contexto _contexto;
+        private Security security;
 
         public RepositorioMedico(Contexto contexto){
             _contexto = contexto;
+            security = new Security();
         }
         public Medico addMedico(Medico medico)
         {
+            medico.password = security.GetMD5Hash(medico.password);
             Medico newMedico = _contexto.Add(medico).Entity;
             _contexto.SaveChanges();
             return newMedico;
@@ -20,6 +23,7 @@ namespace HospitalEnCasa.app.Persistencia
 
         public Medico editMedico(Medico medico)
         {
+            medico.password = security.GetMD5Hash(medico.password);
             Medico medicoEncontrado = _contexto.Medicos.FirstOrDefault(m => m.cedula == medico.cedula);
             if(medico != null){
                 medicoEncontrado.cedula = medico.cedula;
@@ -28,6 +32,9 @@ namespace HospitalEnCasa.app.Persistencia
                 medicoEncontrado.genero = medico.genero;
                 medicoEncontrado.tarjeta_profesional = medico.tarjeta_profesional;
                 medicoEncontrado.edad = medico.edad;
+                medicoEncontrado.username = medico.username;
+                medicoEncontrado.password = medico.password;
+                medicoEncontrado.email = medico.email;
 
                 _contexto.SaveChanges();
             }

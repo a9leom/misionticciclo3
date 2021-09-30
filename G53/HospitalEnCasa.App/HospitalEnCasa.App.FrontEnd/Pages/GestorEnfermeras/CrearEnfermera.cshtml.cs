@@ -13,22 +13,34 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
     {
         private IRepositorioEnfermera repositorioEnfermera;
         public Enfermera enfermera { get; set; }
-        public CrearEnfermeraModel(IRepositorioEnfermera repositorioEnfermera){
+        public CrearEnfermeraModel(IRepositorioEnfermera repositorioEnfermera)
+        {
             this.repositorioEnfermera = repositorioEnfermera;
+            Enfermera enfermera = new Enfermera();
         }
         public void OnGet()
         {
-            Enfermera enfermera = new Enfermera();
+
         }
 
-        public IActionResult OnPost(Enfermera enfermera){
-            try{
+        public IActionResult OnPost(Enfermera enfermera)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
 
-                repositorioEnfermera.addEnfermera(enfermera);
-                return RedirectToPage("./ListarEnfermeras");
+                    repositorioEnfermera.addEnfermera(enfermera);
+                    return RedirectToPage("./ListarEnfermeras");
+                }
+                catch
+                {
+                    return RedirectToPage("../Error");
+                }
             }
-            catch{
-                return RedirectToPage("../Error");
+            else
+            {
+                return Page();
             }
         }
 

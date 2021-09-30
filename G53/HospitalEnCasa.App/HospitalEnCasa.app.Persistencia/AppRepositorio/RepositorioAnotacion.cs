@@ -25,6 +25,7 @@ namespace HospitalEnCasa.app.Persistencia{
                 anotacionAEditar.medico = anotacion.medico;
                 anotacionAEditar.enfermera = anotacion.enfermera;
                 anotacionAEditar.descripcion = anotacion.descripcion;
+                anotacionAEditar.fecha = anotacion.fecha;
                 _contexto.SaveChanges();
             }
             return anotacionAEditar;

@@ -23,8 +23,8 @@ namespace HospitalEnCasa.app.Persistencia{
         {
             Historia historiaAEditar = _contexto.Historias.FirstOrDefault(h => h.Id == historia.Id);
             if(historiaAEditar != null){
-                historiaAEditar.anotacion = historia.anotacion;
-                historiaAEditar.fecha = historia.fecha;
+                historiaAEditar.anotaciones = historia.anotaciones;
+                historiaAEditar.descripcion = historia.descripcion;
                 _contexto.SaveChanges();
             }
             return historiaAEditar;
@@ -42,21 +42,23 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public IEnumerable<Historia> getHistoriaByMedico(Medico medico)
         {
-            IEnumerable<Historia> historias = _contexto.Historias.Where(h => h.anotacion.medico.Id == medico.Id);
-            return historias;
+            /*IEnumerable<Historia> historias = _contexto.Historias.Where(h => h.anotacion.medico.Id == medico.Id);
+            return historias;*/
+            return null;
         }
 
         public IEnumerable<Historia> getHistoriaByMedicoFecha(Medico medico, DateTime inicial, DateTime final)
         {
-            IEnumerable<Historia> historias = _contexto.Historias.Where(h => h.anotacion.medico.Id == medico.Id &
-            h.fecha >= inicial & h.fecha <= final);
-            return historias;
+            //IEnumerable<Historia> historias = _contexto.Historias.Where(h => h.anotaciones.medico.Id == medico.Id &  h.fecha >= inicial & h.fecha <= final);
+            //return historias;
+            return null;
         }
 
         public IEnumerable<Historia> getHistoriaByPaciente(Paciente paciente)
         {
-            IEnumerable<Historia> historias = _contexto.Historias.Where(h => h.anotacion.paciente.Id == paciente.Id);
-            return historias;
+            /*IEnumerable<Historia> historias = _contexto.Historias.Where(h => h.anotaciones.paciente.Id == paciente.Id);
+            return historias;*/
+            return null;
         }
 
         public void removeHistoria(int Id)
