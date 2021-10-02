@@ -32,8 +32,12 @@ namespace MyApp.Namespace
 
         public IActionResult OnPost(Medico medico){
 
-            repositorioMedico.editMedico(medico);
-            return RedirectToPage("./ListaMedicos");
+            if(ModelState.IsValid){
+                repositorioMedico.editMedico(medico);
+                return RedirectToPage("./ListaMedicos");
+            }else{
+                return Page();
+            }
         }
     }
 }

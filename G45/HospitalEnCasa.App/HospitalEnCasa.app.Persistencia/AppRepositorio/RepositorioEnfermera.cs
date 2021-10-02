@@ -7,12 +7,15 @@ namespace HospitalEnCasa.app.Persistencia{
     public class RepositorioEnfermera : IRepositorioEnfermera
     {
         private readonly Contexto _contexto;
+        private readonly Security security;
 
         public RepositorioEnfermera(Contexto contexto){
             this._contexto = contexto;
+            security = new Security();
         }
         public Enfermera addEnfermera(Enfermera enfermera)
         {
+            enfermera.password= security.GetMD5Hash(enfermera.password);
             Enfermera enfermeraNueva = _contexto.Add(enfermera).Entity;
             _contexto.SaveChanges();
             return enfermeraNueva;
@@ -20,6 +23,8 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public Enfermera editEnfermera(Enfermera enfermera)
         {
+            enfermera.password= security.GetMD5Hash(enfermera.password);
+
             Enfermera enfermeraEncontrada = _contexto.Enfermeras.FirstOrDefault(e => e.Id == enfermera.Id);
             if(enfermeraEncontrada != null){
                 enfermeraEncontrada.cedula = enfermera.cedula;
@@ -28,6 +33,9 @@ namespace HospitalEnCasa.app.Persistencia{
                 enfermeraEncontrada.genero = enfermera.genero;
                 enfermeraEncontrada.hospital =  enfermera.hospital;
                 enfermeraEncontrada.descripcion = enfermera.descripcion;
+                enfermeraEncontrada.username = enfermera.username;
+                enfermeraEncontrada.password = enfermera.password;
+                enfermeraEncontrada.email = enfermera.email;
                 _contexto.SaveChanges();
             }
             return enfermeraEncontrada;

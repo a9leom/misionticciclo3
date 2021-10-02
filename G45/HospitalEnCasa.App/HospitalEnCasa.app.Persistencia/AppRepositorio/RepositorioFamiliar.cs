@@ -6,11 +6,14 @@ namespace HospitalEnCasa.app.Persistencia{
     public class RepositorioFamiliar : IRepositorioFamiliar
     {
         private readonly Contexto _contexto;
+        private readonly Security security;
         public RepositorioFamiliar(Contexto context){
             this._contexto = context;
+            security = new Security();
         }
         public Familiar addFamiliar(Familiar familiar)
         {
+            familiar.password = security.GetMD5Hash(familiar.password);
             Familiar familiarNuevo = _contexto.Add(familiar).Entity;
             _contexto.SaveChanges();
             return familiarNuevo;
@@ -18,6 +21,7 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public Familiar editFamiliar(Familiar familiar)
         {
+            familiar.password = security.GetMD5Hash(familiar.password);
             Familiar familiarEncontrado =  _contexto.Familiares.FirstOrDefault(f => f.Id == familiar.Id);
             if(familiarEncontrado != null){
                 familiarEncontrado.cedula = familiar.cedula;
@@ -27,6 +31,9 @@ namespace HospitalEnCasa.app.Persistencia{
                 familiarEncontrado.direccion =  familiar.direccion;
                 familiarEncontrado.longitud = familiar.longitud;
                 familiarEncontrado.latitud = familiar.latitud;
+                familiarEncontrado.username = familiar.username;
+                familiarEncontrado.password = familiar.password;
+                familiarEncontrado.email = familiar.email;
                 _contexto.SaveChanges();
             }
             return familiarEncontrado;

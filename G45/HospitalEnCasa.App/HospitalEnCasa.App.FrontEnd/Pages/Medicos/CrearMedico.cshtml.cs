@@ -16,21 +16,28 @@ namespace MyApp.Namespace
 
         public CrearMedicoModel(IRepositorioMedico repositorioMedico){
             this.repositorioMedico = repositorioMedico;
+            medico = new Medico();
         }
         public void OnGet()
         {
-            medico = new Medico();
+            
         }
 
         public IActionResult OnPost(Medico medico){
 
-            try{
-                repositorioMedico.addMedico(medico);
-                return RedirectToPage("./ListaMedicos");
+            if(ModelState.IsValid){
+                try{
+                    repositorioMedico.addMedico(medico);
+                    return RedirectToPage("./ListaMedicos");
+                }
+                catch{
+                    return RedirectToPage("../Error");
+                }
             }
-            catch{
-                return RedirectToPage("../Error");
+            else{
+                return Page();
             }
+
         }
     }
 }

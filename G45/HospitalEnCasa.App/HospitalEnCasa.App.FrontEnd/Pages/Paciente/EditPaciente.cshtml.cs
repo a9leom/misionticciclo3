@@ -113,7 +113,7 @@ namespace HospitalEnCasa.App.FrontEnd
             }
             else
             {
-                return RedirectToPage("./ListPaciente");
+                return Page();
             }
         }
     }

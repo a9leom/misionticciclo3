@@ -26,11 +26,17 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int?>("HistoriaId")
+                        .HasColumnType("int");
+
                     b.Property<string>("descripcion")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("enfermeraId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("fecha")
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("medicoId")
                         .HasColumnType("int");
@@ -42,6 +48,8 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("HistoriaId");
 
                     b.HasIndex("enfermeraId");
 
@@ -61,15 +69,10 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("anotacionId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("fecha")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("descripcion")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("anotacionId");
 
                     b.ToTable("Historias");
                 });
@@ -91,15 +94,31 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.Property<int>("edad")
                         .HasColumnType("int");
 
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("genero")
                         .HasColumnType("int");
 
                     b.Property<string>("nombre")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("cedula")
+                        .IsUnique();
+
+                    b.HasIndex("username")
                         .IsUnique();
 
                     b.ToTable("Personas");
@@ -114,8 +133,8 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("nivel_azucar")
-                        .HasColumnType("int");
+                    b.Property<double>("nivel_azucar")
+                        .HasColumnType("float");
 
                     b.Property<int>("presion")
                         .HasColumnType("int");
@@ -146,7 +165,9 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.HasBaseType("HospitalEnCasa.app.Dominio.Persona");
 
                     b.Property<string>("direccion")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Familiar_direccion");
 
                     b.Property<int>("latitud")
                         .HasColumnType("int")
@@ -178,6 +199,10 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                 {
                     b.HasBaseType("HospitalEnCasa.app.Dominio.Persona");
 
+                    b.Property<string>("direccion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("enfermeraId")
                         .HasColumnType("int");
 
@@ -204,6 +229,10 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
 
             modelBuilder.Entity("HospitalEnCasa.app.Dominio.Anotacion", b =>
                 {
+                    b.HasOne("HospitalEnCasa.app.Dominio.Historia", null)
+                        .WithMany("anotaciones")
+                        .HasForeignKey("HistoriaId");
+
                     b.HasOne("HospitalEnCasa.app.Dominio.Enfermera", "enfermera")
                         .WithMany()
                         .HasForeignKey("enfermeraId");
@@ -229,15 +258,6 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.Navigation("signosVital");
                 });
 
-            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Historia", b =>
-                {
-                    b.HasOne("HospitalEnCasa.app.Dominio.Anotacion", "anotacion")
-                        .WithMany()
-                        .HasForeignKey("anotacionId");
-
-                    b.Navigation("anotacion");
-                });
-
             modelBuilder.Entity("HospitalEnCasa.app.Dominio.Paciente", b =>
                 {
                     b.HasOne("HospitalEnCasa.app.Dominio.Enfermera", "enfermera")
@@ -257,6 +277,11 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.Navigation("familiar");
 
                     b.Navigation("medico");
+                });
+
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Historia", b =>
+                {
+                    b.Navigation("anotaciones");
                 });
 #pragma warning restore 612, 618
         }

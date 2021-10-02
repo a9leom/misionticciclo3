@@ -26,33 +26,33 @@ namespace HospitalEnCasa.App.FrontEnd
         public IEnumerable<SelectListItem> enfermeras { get; set; }
         public IEnumerable<SelectListItem> familiares { get; set; }
 
-        public string mensaje { get; set; }
         public Enfermera enfermera { get; set; }
-        public Medico medico {get; set;}
+        public Medico medico { get; set; }
         public Familiar familiar { get; set; }
 
         public AddPacienteModel(IRepositorioPaciente repositorioPaciente, IRepositorioMedico repositorioMedico, IRepositorioEnfermera repositorioEnfermera, IRepositorioFamiliar repositorioFamiliar)
         {
             this.repositorioPaciente = repositorioPaciente;
-                this.repositorioEnfermera = repositorioEnfermera;
-                this.repositorioMedico = repositorioMedico;
-                this.repositorioFamiliar = repositorioFamiliar;
-        }
-        public void OnGet()
-        {            
-            mensaje = "";
+            this.repositorioEnfermera = repositorioEnfermera;
+            this.repositorioMedico = repositorioMedico;
+            this.repositorioFamiliar = repositorioFamiliar;
             Inicializar();
         }
+        public void OnGet()
+        {
 
-        public void Inicializar(){
-                paciente = new Paciente();
-                medicos = repositorioMedico.getMedicos().Select(
-                m => new SelectListItem
-                {
-                    Text = m.nombre,
-                    Value = Convert.ToString(m.cedula)
-                }
-            );
+        }
+
+        public void Inicializar()
+        {
+            paciente = new Paciente();
+            medicos = repositorioMedico.getMedicos().Select(
+            m => new SelectListItem
+            {
+                Text = m.nombre,
+                Value = Convert.ToString(m.cedula)
+            }
+        );
 
             familiares = repositorioFamiliar.getAllFamiliares().Select(
                 f => new SelectListItem
@@ -73,10 +73,8 @@ namespace HospitalEnCasa.App.FrontEnd
         public IActionResult OnPost(Paciente paciente, int cedulaMedico, int cedulaEnfermera, int cedulaFamiliar)
         {
 
-
-            if(!ModelState.IsValid){
-                mensaje = "Los campos latitud y longitud son obligatorios";
-                Inicializar();
+            if (!ModelState.IsValid)
+            {
                 return Page();
             }
             try
