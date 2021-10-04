@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using HospitalEnCasa.app.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace HospitalEnCasa.app.Persistencia{
     public class RepositorioFamiliar : IRepositorioFamiliar
@@ -46,7 +47,8 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public Familiar getFamiliar(int cedula)
         {
-            return _contexto.Familiares.FirstOrDefault(p => p.cedula == cedula);
+            Familiar familiarEncontrado = _contexto.Familiares.FirstOrDefault(p => p.cedula == cedula);
+            return familiarEncontrado;
         }
 
         public void RemoveFamiliar(Familiar familiar)

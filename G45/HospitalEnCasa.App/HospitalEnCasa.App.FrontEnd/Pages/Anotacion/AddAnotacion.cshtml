@@ -31,14 +31,16 @@
         <input asp-for="signosVital.presion" class="form-control">
         <span asp-validation-for="signosVital.presion" class="text-danger"></span>
     </div>
+    <div class="form-group row">
+        <label asp-for="anotacion.descripcion" class="form-control">Descripción</label>
+        <input asp-for="anotacion.descripcion" class="form-control">
+        <span asp-validation-for="anotacion.descripcion" class="text-danger"></span>
+    </div>
+    <div class="form-group row">
+        <label asp-for="anotacion.fecha" class="form-control">Fecha</label>
+        <input asp-for="anotacion.fecha" class="form-control" value="Datetime.now">
+        <span asp-validation-for="anotacion.fecha" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a class="btn btn-primary" href="./ListAnotacion">Cancelar</a>
 </form>
-<!--
-            <td>anotacion.Id</td>
-            <td>anotacion.paciente.nombre</td>
-            <td>anotacion.medico.nombre</td>
-            <td>anotacion.enfermera.nombre</td>
-            <td>anotacion.signosVital.pulso_cardiaco</td>
-            <td>anotacion.signosVital.presion</td>
-            <td>anotacion.signosVital.nivel_azucar</td>
-            <td>anotacion.descripcion</td>
-            <td>anotacion.fecha</td>-->

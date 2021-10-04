@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HospitalEnCasa.app.Persistencia.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20211002113420_Inicial")]
+    [Migration("20211004134210_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

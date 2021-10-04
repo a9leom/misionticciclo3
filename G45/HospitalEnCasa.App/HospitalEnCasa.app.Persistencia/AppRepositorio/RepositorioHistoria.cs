@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HospitalEnCasa.app.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace HospitalEnCasa.app.Persistencia{
     public class RepositorioHistoria : IRepositorioHistoria
@@ -38,22 +39,20 @@ namespace HospitalEnCasa.app.Persistencia{
             return _contexto.Historias.FirstOrDefault(h => h.Id == Id);
         }
 
-        public IEnumerable<Historia> getHistoriaByMedico(Medico medico)
+        public Historia getHistoriaByMedico(Medico medico)
         {
-            //return _contexto.Historias.Where(h => h.anotacion.medico.Id == medico.Id);
-            return null;
+            return _contexto.Historias.Include("anotaciones").FirstOrDefault(h => h.anotaciones.All(a => a.medico.Id == medico.Id));
+
         }
 
-        public IEnumerable<Historia> getHistoriaByPaciente(Paciente paciente)
+        public Historia getHistoriaByPaciente(Paciente paciente)
         {
-            //return _contexto.Historias.Where(h => h.anotacion.paciente.Id == paciente.Id);
-            return null;
+            return _contexto.Historias.Include("anotaciones").FirstOrDefault(h => h.anotaciones.All(a=>a.paciente.Id == paciente.Id));
         }
 
-        public IEnumerable<Historia> getHistoriaByPacienteAndFecha(Paciente paciente, DateTime fecha_inicio, DateTime fecha_final)
+        public Historia getHistoriaByPacienteAndFecha(Paciente paciente, DateTime fecha_inicio, DateTime fecha_final)
         {
-            //return _contexto.Historias.Where(h => h.anotacion.paciente.Id == paciente.Id && h.fecha >= fecha_inicio && h.fecha<= fecha_final);
-            return null;
+            return _contexto.Historias.Include("anotaciones").FirstOrDefault(h => h.anotaciones.All(a => a.paciente.Id == paciente.Id && a.fecha >= fecha_inicio && a.fecha<= fecha_final));
         }
 
         public void RemoveHistoria(int Id)

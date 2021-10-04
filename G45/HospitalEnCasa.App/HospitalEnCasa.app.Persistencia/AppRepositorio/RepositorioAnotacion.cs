@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using HospitalEnCasa.app.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace HospitalEnCasa.app.Persistencia{
     public class RepositorioAnotacion : IRepositorioAnotacion
@@ -32,12 +33,12 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public IEnumerable<Anotacion> getAllAnotacion()
         {
-            return _contexto.Anotaciones;
+            return _contexto.Anotaciones.Include("medico").Include("paciente").Include("enfermera").Include("signosVital");
         }
 
         public Anotacion getAnotacion(int Id)
         {
-            return _contexto.Anotaciones.FirstOrDefault(a => a.Id == Id);
+            return _contexto.Anotaciones.Include("medico").Include("paciente").Include("enfermera").Include("signosVital").FirstOrDefault(a => a.Id == Id);
         }
 
         public void removeAnotacion(Anotacion anotacion)
