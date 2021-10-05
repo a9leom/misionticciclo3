@@ -40,25 +40,23 @@ namespace HospitalEnCasa.app.Persistencia{
             return _contexto.Historias.FirstOrDefault(h => h.Id == Id);
         }
 
-        public IEnumerable<Historia> getHistoriaByMedico(Medico medico)
+        public Historia getHistoriaByMedico(Medico medico)
         {
-            /*IEnumerable<Historia> historias = _contexto.Historias.Where(h => h.anotacion.medico.Id == medico.Id);
-            return historias;*/
-            return null;
+            return _contexto.Historias.FirstOrDefault(h => h.anotaciones.Any(a => a.medico.Id == medico.Id));
+
         }
 
-        public IEnumerable<Historia> getHistoriaByMedicoFecha(Medico medico, DateTime inicial, DateTime final)
+        public Historia getHistoriaByMedicoFecha(Medico medico, DateTime inicial, DateTime final)
         {
-            //IEnumerable<Historia> historias = _contexto.Historias.Where(h => h.anotaciones.medico.Id == medico.Id &  h.fecha >= inicial & h.fecha <= final);
-            //return historias;
-            return null;
+            return _contexto.Historias.FirstOrDefault(h => h.anotaciones.All(a => a.medico.Id == medico.Id && a.fecha >= inicial && a.fecha <= final));
+
         }
 
-        public IEnumerable<Historia> getHistoriaByPaciente(Paciente paciente)
+        public Historia getHistoriaByPaciente(Paciente paciente)
         {
-            /*IEnumerable<Historia> historias = _contexto.Historias.Where(h => h.anotaciones.paciente.Id == paciente.Id);
-            return historias;*/
-            return null;
+            return _contexto.Historias.FirstOrDefault(h => h.anotaciones.Any(a => a.paciente.Id == paciente.Id));
+ 
+
         }
 
         public void removeHistoria(int Id)

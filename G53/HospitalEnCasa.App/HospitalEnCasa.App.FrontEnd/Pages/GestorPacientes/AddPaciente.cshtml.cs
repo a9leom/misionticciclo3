@@ -30,10 +30,8 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
             this.repositorioMedico = repositorioMedico;
             this.repositorioFamiliar = repositorioFamiliar;
             this.repositorioEnfermera = repositorioEnfermera;
-        }
-        public void OnGet()
-        {
-            paciente = new Paciente();
+
+                        paciente = new Paciente();
             medicos = repositorioMedico.getAllMedicos().Select(
                 m => new SelectListItem{
                     Text = m.nombre,
@@ -53,6 +51,10 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
                     Value = Convert.ToString(f.cedula)
                 }
             ).ToList();
+        }
+        public void OnGet()
+        {
+
         }
 
         public ActionResult OnPost(Paciente paciente, int cedulaMedico, int cedulaEnfermera, int cedulaFamiliar){
@@ -79,7 +81,7 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
                 }
             }
             else{
-                return RedirectToPage("./AddPaciente");
+                return Page();
             }
         }
     }

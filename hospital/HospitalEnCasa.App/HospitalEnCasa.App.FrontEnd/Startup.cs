@@ -26,7 +26,9 @@ namespace HospitalEnCasa.App.FrontEnd
         {
             services.AddRazorPages();
             services.AddSingleton<IRepositorioPersona>(new RepositorioPersona(new Contexto()));
-            
+            services.AddAuthetication().AddCookie("HospitalEnCasaCookie", options => 
+                options.Cookie.Name = "HospitalEnCasaCookie"
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

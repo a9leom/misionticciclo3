@@ -85,3 +85,12 @@ D:\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3
 D:\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Details.cshtml.g.cs
 D:\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Editar.cshtml.g.cs
 D:\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Crear.cshtml.g.cs
+D:\Mintic\misionticciclo3\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\HospitalEnCasa.App.FrontEnd.csprojAssemblyReference.cache
+D:\Mintic\misionticciclo3\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\HospitalEnCasa.App.FrontEnd.AssemblyInfoInputs.cache
+D:\Mintic\misionticciclo3\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\HospitalEnCasa.App.FrontEnd.AssemblyInfo.cs
+D:\Mintic\misionticciclo3\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\HospitalEnCasa.App.FrontEnd.csproj.CoreCompileInputs.cache
+D:\Mintic\misionticciclo3\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\HospitalEnCasa.App.FrontEnd.MvcApplicationPartsAssemblyInfo.cache
+D:\Mintic\misionticciclo3\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\HospitalEnCasa.App.FrontEnd.RazorAssemblyInfo.cache
+D:\Mintic\misionticciclo3\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\HospitalEnCasa.App.FrontEnd.RazorAssemblyInfo.cs
+D:\Mintic\misionticciclo3\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\HospitalEnCasa.App.FrontEnd.dll
+D:\Mintic\misionticciclo3\hospital\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\HospitalEnCasa.App.FrontEnd.pdb

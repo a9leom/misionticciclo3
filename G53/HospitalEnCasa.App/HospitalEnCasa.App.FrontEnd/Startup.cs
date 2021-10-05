@@ -26,12 +26,13 @@ namespace HospitalEnCasa.App.FrontEnd
         {
             services.AddRazorPages();
 
-            services.AddSingleton<IRepositorioMedico>(new RepositorioMedico(new Contexto()));
-            services.AddSingleton<IRepositorioEnfermera>(new RepositorioEnfermera(new Contexto()));
-            services.AddSingleton<IRepositorioFamiliar>(new RepositorioFamiliar(new Contexto()));
-            services.AddSingleton<IRepositorioPaciente>(new RepositorioPaciente(new Contexto()));
-            services.AddSingleton<IRepositorioAnotacion>(new RepositorioAnotacion(new Contexto()));
-            services.AddSingleton<IRepositorioHistoria>(new RepositorioHistoria(new Contexto()));
+            Contexto _context = new Contexto();
+            services.AddSingleton<IRepositorioMedico>(new RepositorioMedico(_context));
+            services.AddSingleton<IRepositorioEnfermera>(new RepositorioEnfermera(_context));
+            services.AddSingleton<IRepositorioFamiliar>(new RepositorioFamiliar(_context));
+            services.AddSingleton<IRepositorioPaciente>(new RepositorioPaciente(_context));
+            services.AddSingleton<IRepositorioAnotacion>(new RepositorioAnotacion(_context));
+            services.AddSingleton<IRepositorioHistoria>(new RepositorioHistoria(_context));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

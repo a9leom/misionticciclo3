@@ -9,9 +9,9 @@ namespace HospitalEnCasa.app.Persistencia{
         Historia editHistoria(Historia historia);
         Historia getHistoria(int Id);
 
-        IEnumerable<Historia> getHistoriaByPaciente(Paciente paciente);
-        IEnumerable<Historia> getHistoriaByMedico(Medico medico);
-        IEnumerable<Historia> getHistoriaByMedicoFecha(Medico medico, DateTime inicial, DateTime final);
+        Historia getHistoriaByPaciente(Paciente paciente);
+        Historia getHistoriaByMedico(Medico medico);
+        Historia getHistoriaByMedicoFecha(Medico medico, DateTime inicial, DateTime final);
         void removeHistoria(int Id);
     }
 }

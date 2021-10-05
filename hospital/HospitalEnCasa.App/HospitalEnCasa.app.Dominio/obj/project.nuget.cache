@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iCO+uZf36ewmUmqhsDg/RXdsvGzCQgRI82vpYW2ElERN+uMOm8h4vn6WOh/pcRR6KYD23nwS7Pcv55D0LUIWsQ==",
+  "dgSpecHash": "CuOrEBLC3n5WX5RX30+fTPgnXZ35GKOgDVcc+eEVyLtUNQS1gynM6Bu+SQ2iWExT9OpkswqEqhdfy7Lwjtjufg==",
   "success": true,
-  "projectFilePath": "D:\\hospital\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj",
+  "projectFilePath": "D:\\Mintic\\misionticciclo3\\hospital\\HospitalEnCasa.App\\HospitalEnCasa.app.Dominio\\HospitalEnCasa.app.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carde\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\carde\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

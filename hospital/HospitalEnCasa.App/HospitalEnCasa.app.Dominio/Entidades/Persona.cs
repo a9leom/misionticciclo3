@@ -9,5 +9,7 @@ namespace HospitalEnCasa.app.Dominio
         public string nombre{ get;set;}
         public int edad{get; set;}
         public Genero genero{ get; set; }
+        public string username{ get; set}
+        public string password{ get; set}
     }
 }

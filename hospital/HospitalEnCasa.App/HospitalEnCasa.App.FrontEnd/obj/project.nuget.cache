@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TNXsDCuk4pbaNYr7EDhF67D3Wdv1H5mg8nzuFDWSbwGauKs6ScZtXUH+8679dO1+cPzO/dzrAH9I3tiCnM/a1A==",
+  "dgSpecHash": "nW86FKLX6Oj5GVl/aPogUmRLUaOeIrcB7OXaXgGKRaei9GMznOa38XU/7efbm7fK5ewvHbsGnQ0nLV3r20ONgw==",
   "success": true,
-  "projectFilePath": "D:\\hospital\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\HospitalEnCasa.App.FrontEnd.csproj",
+  "projectFilePath": "D:\\Mintic\\misionticciclo3\\hospital\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\HospitalEnCasa.App.FrontEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carde\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\carde\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
