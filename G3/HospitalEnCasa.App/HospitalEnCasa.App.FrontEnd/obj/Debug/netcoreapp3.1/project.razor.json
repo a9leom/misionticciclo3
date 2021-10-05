@@ -14467,11 +14467,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Historia\\AddHistoria.cshtml",
-      "TargetPath": "Pages\\Historia\\AddHistoria.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Pacientes\\AddPaciente.cshtml",
       "TargetPath": "Pages\\Pacientes\\AddPaciente.cshtml",
       "FileKind": "mvc"
@@ -14529,6 +14524,11 @@
     {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Familiares\\EditFamiliar.cshtml",
       "TargetPath": "Pages\\Familiares\\EditFamiliar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G3\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Historia\\DetailHistoria.cshtml",
+      "TargetPath": "Pages\\Historia\\DetailHistoria.cshtml",
       "FileKind": "mvc"
     },
     {

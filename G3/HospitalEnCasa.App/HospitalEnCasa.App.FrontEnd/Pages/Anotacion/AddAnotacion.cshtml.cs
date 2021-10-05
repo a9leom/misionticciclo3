@@ -17,21 +17,24 @@ namespace HospitalEnCasa.App.FrontEnd
         private readonly IRepositorioMedico repositorioMedico;
         private readonly IRepositorioEnfermera repositorioEnfermera;
         private readonly IRepositorioPaciente repositorioPaciente;
+        private readonly IRepositorioHistoria repositorioHistoria;
 
         public IEnumerable<SelectListItem> medicos { get; set; }
         public IEnumerable<SelectListItem> enfermeras { get; set; }
         public IEnumerable<SelectListItem> pacientes { get; set;}
 
         public Anotacion anotacion { get; set; }
+        public SignoVital signoVital { get; set; }
         public int cedulaMedico { get; set; }
         public int cedulaEnfermera { get; set; }
         public int cedulaPaciente { get; set; }
 
-        public AddAnotacionModel(IRepositorioAnotacion repositorioAnotacion, IRepositorioMedico repositorioMedico,IRepositorioPaciente repositorioPaciente,IRepositorioEnfermera repositorioEnfermera){
+        public AddAnotacionModel(IRepositorioAnotacion repositorioAnotacion, IRepositorioMedico repositorioMedico,IRepositorioPaciente repositorioPaciente,IRepositorioEnfermera repositorioEnfermera,IRepositorioHistoria repositorioHistoria){
             this.repositorioAnotacion = repositorioAnotacion;
             this.repositorioMedico = repositorioMedico;
             this.repositorioEnfermera = repositorioEnfermera;
             this.repositorioPaciente = repositorioPaciente;
+            this.repositorioHistoria = repositorioHistoria;
 
             medicos = repositorioMedico.getAllMedicos().Select(
                 m => new SelectListItem{
@@ -53,24 +56,46 @@ namespace HospitalEnCasa.App.FrontEnd
             );
 
             anotacion = new Anotacion();
+            signoVital = new SignoVital();
         }
         public void OnGet()
         {
         } 
 
-        public IActionResult OnPost(Anotacion anotacion,int cedulaMedico,int cedulaEnfermera,int cedulaPaciente){
+        public IActionResult OnPost(Anotacion anotacion,int cedulaMedico,int cedulaEnfermera,int cedulaPaciente, SignoVital signoVital){
             if(ModelState.IsValid){
-                repositorioAnotacion.addAnotacion(anotacion);
 
                 Medico medico = repositorioMedico.getMedico(cedulaMedico);
                 Enfermera enfermera = repositorioEnfermera.getEnfermera(cedulaEnfermera);
                 Paciente paciente = repositorioPaciente.getPaciente(cedulaPaciente);
 
-                anotacion.medico = medico;
-                anotacion.enfermera = enfermera;
-                anotacion.paciente = paciente;
+                Anotacion anotacionNueva = new Anotacion(){
+                    medico = medico,
+                    enfermera = enfermera,
+                    paciente = paciente,
+                    fecha = anotacion.fecha,
+                    descripcion = anotacion.descripcion,
+                    signoVital = signoVital
+                };
 
-                repositorioAnotacion.editAnotacion(anotacion);
+                Historia historia = repositorioHistoria.historiaPorPaciente(paciente);
+
+                /*
+                Si la persona tiene anotaciones quiere decir que tiene una historia clinica, si no debemos crearla
+                */
+                if(historia == null){
+                    historia = new Historia(){
+                        descripcion= "Fecha: "+DateTime.Now+" Paciente "+paciente.nombre,
+                        anotaciones = new List<Anotacion>{anotacionNueva}
+                    };
+                    repositorioHistoria.addHistoria(historia);
+
+                }else{
+                    List<Anotacion> listaAnotaciones = historia.anotaciones;
+                    listaAnotaciones.Add(anotacionNueva);
+                    historia.anotaciones = listaAnotaciones;
+                    repositorioHistoria.editHistoria(historia);
+                }
 
                 return RedirectToPage("./ListAnotacion");
             }

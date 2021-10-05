@@ -17,7 +17,6 @@ namespace HospitalEnCasa.app.Persistencia
         public Medico addMedico(Medico medico)
         {
             String password = medico.password;
-            password += "hospital"+password.Reverse(); //Añadir sal a la contraseña
             password = security.GetMD5Hash(password);
             medico.password = password;
             Medico newMedico =_contexto.Add(medico).Entity;
@@ -29,7 +28,6 @@ namespace HospitalEnCasa.app.Persistencia
         {
             Medico medicoEncontrado = _contexto.Medicos.FirstOrDefault(m => m.Id == medico.Id);
             String password = medico.password;
-            password += "hospital"+password.Reverse(); //Añadir sal a la contraseña
             password = security.GetMD5Hash(password);
             medico.password = password;
 

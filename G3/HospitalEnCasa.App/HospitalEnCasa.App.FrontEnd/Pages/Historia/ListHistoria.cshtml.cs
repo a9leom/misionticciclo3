@@ -13,10 +13,11 @@ namespace HospitalEnCasa.App.FrontEnd
     {
         private readonly IRepositorioHistoria repositorioHistoria;
         public IEnumerable<Historia> historias;
+        public Paciente paciente { get; set; }
 
         public ListHistoriaModel(IRepositorioHistoria repositorioHistoria){
             this.repositorioHistoria = repositorioHistoria;
-            historias = repositorioHistoria.geAllHistoria();
+            historias = repositorioHistoria.getAllHistoria();
         }
         public void OnGet()
         {

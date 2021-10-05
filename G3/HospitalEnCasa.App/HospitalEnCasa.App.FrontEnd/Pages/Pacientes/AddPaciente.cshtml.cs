@@ -31,9 +31,6 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
             this.repositorioMedico = repositorioMedico;
             this.repositorioEnfermera = repositorioEnfermera;
             this.repositorioFamiliarDesignado = repositorioFamiliarDesignado;
-        }
-        public void OnGet()
-        {
             paciente = new Paciente();
             medicos = repositorioMedico.getAllMedicos().Select(
                 a => new SelectListItem
@@ -56,6 +53,10 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
                     Text = a.nombre
                 }
             ).ToList();
+        }
+        public void OnGet()
+        {
+
         }
 
         public IActionResult OnPost(Paciente paciente, int cedulaMedico, int cedulaEnfermera, int cedulaFamiliar)

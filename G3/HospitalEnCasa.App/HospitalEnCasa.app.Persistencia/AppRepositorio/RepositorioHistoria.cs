@@ -23,46 +23,43 @@ namespace HospitalEnCasa.app.Persistencia{
         {
             Historia historiaAEditar = _contexto.historias.FirstOrDefault(p => p.Id == historia.Id);
             if(historiaAEditar != null){
-                historiaAEditar.anotacion = historia.anotacion;
-                historiaAEditar.fecha = historia.fecha;
+                historiaAEditar.anotaciones = historia.anotaciones;
+                historiaAEditar.descripcion = historia.descripcion;
                 _contexto.SaveChanges();
 
             }
             return historiaAEditar;
         }
 
-        public IEnumerable<Historia> geAllHistoria()
+        public IEnumerable<Historia> getAllHistoria()
         {
-            return _contexto.historias.Include("anotacion").Include("anotacion.paciente").Include("anotacion.medico").Include("anotacion.enfermera");
+            return _contexto.historias.Include("anotaciones").Include("anotaciones.paciente").Include("anotaciones.medico").Include("anotaciones.enfermera").Include("anotaciones.signoVital");
         }
 
         public Historia getHistoria(int id)
         {
-            return _contexto.historias.Include("anotacion").FirstOrDefault(h => h.Id == id);
+            return _contexto.historias.Include("anotaciones").Include("anotaciones.paciente").Include("anotaciones.signoVital").Include("anotaciones.medico").Include("anotaciones.enfermera").FirstOrDefault(h => h.Id == id);
         }
 
         public IEnumerable<Historia> historiaPorEnfermera(Enfermera enfermera)
         {
-            IEnumerable<Historia> historias = _contexto.historias.Where(h => h.anotacion.enfermera.Id == enfermera.Id).Include("anotacionId");
-            return historias;  
+            return _contexto.historias.Where(h => h.anotaciones.Any(a => a.enfermera.Id == enfermera.Id));
+ 
         }
 
-        public IEnumerable<Historia> historiaPorFechaYPaciente(DateTime fecha_inicio, DateTime fecha_final, Paciente paciente)
+        public Historia historiaPorFechaYPaciente(DateTime fecha_inicio, DateTime fecha_final, Paciente paciente)
         {
-            IEnumerable<Historia> historias = _contexto.historias.Where(h => h.fecha >= fecha_inicio & h.fecha <= fecha_final & h.anotacion.paciente.Id >= paciente.Id).Include("anotacionId");      
-            return historias;  
+            return _contexto.historias.FirstOrDefault(h => h.anotaciones.Any(a => a.paciente.Id == paciente.Id && a.fecha >= fecha_inicio && a.fecha <= fecha_final));
         }
 
-        public IEnumerable<Historia> historiaPorMedico(Medico medico)
+        public IEnumerable<Historia>  historiaPorMedico(Medico medico)
         {
-            IEnumerable<Historia> historias = _contexto.historias.Where(h => h.anotacion.medico.Id == medico.Id).Include("anotacionId");
-            return historias;
+            return _contexto.historias.Where(h => h.anotaciones.Any(a => a.medico.Id == medico.Id));
         }
 
-        public IEnumerable<Historia> historiaPorPaciente(Paciente paciente)
+        public Historia historiaPorPaciente(Paciente paciente)
         {
-            IEnumerable<Historia> historias = _contexto.historias.Where(h => h.anotacion.paciente.Id == paciente.Id).Include("anotacionId");
-            return historias;
+            return _contexto.historias.FirstOrDefault(h => h.anotaciones.All(a => a.paciente.Id == paciente.Id));
             
         }
 
@@ -74,5 +71,7 @@ namespace HospitalEnCasa.app.Persistencia{
                 _contexto.SaveChanges();
             }
         }
+
+
     }
 }

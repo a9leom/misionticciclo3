@@ -105,5 +105,5 @@ D:\Mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\bin\
 D:\Mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\Mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Anotacion\AddAnotacion.cshtml.g.cs
 D:\Mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Anotacion\ListAnotacion.cshtml.g.cs
-D:\Mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Historia\AddHistoria.cshtml.g.cs
 D:\Mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Historia\ListHistoria.cshtml.g.cs
+D:\Mintic\misionticciclo3\G3\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Historia\DetailHistoria.cshtml.g.cs

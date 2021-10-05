@@ -3,22 +3,17 @@
 @{
 }
 <h1>Historias</h1>
-<a href="./AddHistoria" class="btn btn-primary">Añadir historia</a>
 <table class="table striped-table">
     <tr>
-        <th>Fecha</th>
         <th>Paciente</th>
-        <th>Medico</th>
-        <th>Enfermera</th>
         <th>Descripción</th>
+        <td>Ver historia médica</td>
     </tr>
     @foreach(var historia in Model.historias){
         <tr>
-            <td>@historia.fecha</td>
-            <td>@historia.anotacion.paciente.nombre</td>
-            <td>@historia.anotacion.medico.nombre</td>
-            <td>@historia.anotacion.enfermera.nombre</td>
-            <td>@historia.anotacion.descripcion</td>
+            <td>@historia.anotaciones[0].paciente.nombre</td>
+            <td>@historia.descripcion</td>
+            <td><a asp-page="./DetailHistoria" asp-route-idHistoria="@historia.Id">Ver detalles</a></td>
         </tr>
     }
 </table>

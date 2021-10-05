@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Security.Cryptography;
 namespace HospitalEnCasa.app.Persistencia
 {
@@ -6,6 +7,8 @@ namespace HospitalEnCasa.app.Persistencia
     {
         public String GetMD5Hash(String input)
         {
+            input += "hospital"+input.Reverse(); //Añadir sal a la contraseña
+
             MD5CryptoServiceProvider x = new MD5CryptoServiceProvider();
             byte[] bs = System.Text.Encoding.UTF8.GetBytes(input);
             bs = x.ComputeHash(bs);
