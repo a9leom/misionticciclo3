@@ -32,6 +32,7 @@ namespace HospitalEnCasa.App.FrontEnd
             services.AddSingleton<IRepositorioAnotacion>(new RepositorioAnotacion(_contexto));
             services.AddSingleton<IRepositorioHistoria>(new RepositorioHistoria(_contexto));
             services.AddSingleton<IRepositorioFamiliarDesignado>(new RepositorioFamiliarDesignado(_contexto));
+            services.AddSingleton<IRepositorioCita>(new RepositorioCita(_contexto));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

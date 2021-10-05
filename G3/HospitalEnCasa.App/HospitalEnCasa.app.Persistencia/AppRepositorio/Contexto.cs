@@ -10,10 +10,17 @@ namespace HospitalEnCasa.app.Persistencia
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Medico> Medicos { get; set; }
         public DbSet<Paciente> Pacientes {get; set; }
+
+        internal object Include(string v)
+        {
+            throw new NotImplementedException();
+        }
+
         public DbSet<Enfermera> Enfermeras{get; set; }
         public DbSet<Familiar_Designado> Familiares_Designados {get; set;}
         public DbSet<Historia> historias{get; set;}
         public DbSet<Anotacion> anotaciones{get; set;}
+        public DbSet<Cita> Citas { get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

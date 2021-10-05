@@ -1,0 +1,26 @@
+﻿@page
+@model HospitalEnCasa.App.FrontEnd.Pages.ListCitaModel
+@{
+}
+<h1>Gestionar citas</h1>
+<a class="btn btn-primary" asp-page="./AddCita">Añadir cita</a>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Paciente</th>
+        <th>Medico</th>
+        <th>Descripción</th>
+        <th>Consultorio</th>
+        <th>Dia</th>
+        <th>Hora</th>
+    </tr>
+    @foreach(var cita in @Model.citas){
+        <tr>
+            <td>@cita.paciente.nombre</td>
+            <td>@cita.medico.nombre</td>
+            <td>@cita.descripcion</td>
+            <td>@cita.sala</td>
+            <td>@cita.dia</td>
+            <td>@cita.hora</td>
+        </tr>
+    }
+</table>
