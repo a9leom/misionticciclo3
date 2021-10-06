@@ -11,10 +11,6 @@ namespace HospitalEnCasa.app.Persistencia
         public DbSet<Medico> Medicos { get; set; }
         public DbSet<Paciente> Pacientes {get; set; }
 
-        internal object Include(string v)
-        {
-            throw new NotImplementedException();
-        }
 
         public DbSet<Enfermera> Enfermeras{get; set; }
         public DbSet<Familiar_Designado> Familiares_Designados {get; set;}
