@@ -3,7 +3,7 @@
 @{
 }
 <h1>Detalle historia</h1>
-<h2>Paciente: @Model.historia.anotaciones[0].paciente.nombre</h2>
+<h2>Paciente: @Model.Historia.anotaciones[0].paciente.nombre</h2>
 <p>A continuación podrá ver las anotaciones del paciente</p>
 <table class="table">
     <tr>
@@ -15,7 +15,7 @@
         <th>Pulso cardiaco</th>
         <th>Observacion</th>
     </tr>
-    @foreach(var anotacion in @Model.historia.anotaciones){
+    @foreach(var anotacion in @Model.Historia.anotaciones){
         <tr>
             <td>@anotacion.fecha</td>
             <td>@anotacion.medico.nombre</td>
