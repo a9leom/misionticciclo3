@@ -14,6 +14,8 @@ namespace HospitalEnCasa.app.Persistencia
         public DbSet<Familiar> Familiares { get; set; }
         public DbSet<Historia> Historias { get; set; }
         public DbSet<Anotacion> Anotaciones { get; set; }
+        public DbSet<Cita> Citas { get; set; }
+        public DbSet<Administrador> Administradores { get; set; }
         
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

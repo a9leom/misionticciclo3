@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HospitalEnCasa.app.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace HospitalEnCasa.app.Persistencia{
     public class RepositorioHistoria : IRepositorioHistoria
@@ -10,7 +11,7 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public RepositorioHistoria(Contexto contexto){
             this._contexto = contexto;
-        }        
+        }
         
         public Historia addHistoria(Historia historia)
         {
@@ -32,31 +33,29 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public IEnumerable<Historia> getAllHistoria()
         {
-            return _contexto.Historias;
+            return _contexto.Historias.Include("anotaciones").Include("anotaciones.medico").Include("anotaciones.enfermera").Include("anotaciones.paciente");
         }
 
         public Historia getHistoria(int Id)
         {
-            return _contexto.Historias.FirstOrDefault(h => h.Id == Id);
+            return _contexto.Historias.Include("anotaciones").Include("anotaciones.medico").Include("anotaciones.enfermera").Include("anotaciones.paciente").FirstOrDefault(h => h.Id == Id);
         }
 
         public Historia getHistoriaByMedico(Medico medico)
         {
-            return _contexto.Historias.FirstOrDefault(h => h.anotaciones.Any(a => a.medico.Id == medico.Id));
+            return _contexto.Historias.Include("anotaciones").Include("anotaciones.medico").Include("anotaciones.enfermera").Include("anotaciones.paciente").FirstOrDefault(h => h.anotaciones.Any(a => a.medico.Id == medico.Id));
 
         }
 
         public Historia getHistoriaByMedicoFecha(Medico medico, DateTime inicial, DateTime final)
         {
-            return _contexto.Historias.FirstOrDefault(h => h.anotaciones.All(a => a.medico.Id == medico.Id && a.fecha >= inicial && a.fecha <= final));
+            return _contexto.Historias.Include("anotaciones").Include("anotaciones.medico").Include("anotaciones.enfermera").Include("anotaciones.paciente").FirstOrDefault(h => h.anotaciones.All(a => a.medico.Id == medico.Id && a.fecha >= inicial && a.fecha <= final));
 
         }
 
         public Historia getHistoriaByPaciente(Paciente paciente)
         {
-            return _contexto.Historias.FirstOrDefault(h => h.anotaciones.Any(a => a.paciente.Id == paciente.Id));
- 
-
+            return _contexto.Historias.Include("anotaciones").Include("anotaciones.medico").Include("anotaciones.enfermera").Include("anotaciones.paciente").FirstOrDefault(h => h.anotaciones.Any(a => a.paciente.Id == paciente.Id));
         }
 
         public void removeHistoria(int Id)
