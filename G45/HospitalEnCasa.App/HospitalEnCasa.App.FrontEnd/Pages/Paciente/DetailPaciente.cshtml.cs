@@ -7,7 +7,7 @@ using HospitalEnCasa.app.Persistencia;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace HospitalEnCasa.App.FrontEnd
+namespace HospitalEnCasa.App.FrontEnd.Pages
 {
     public class DetailPacienteModel : PageModel
     {

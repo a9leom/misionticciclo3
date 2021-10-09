@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using HospitalEnCasa.app.Persistencia;
 using HospitalEnCasa.app.Dominio;
 
-namespace MyApp.Namespace
+namespace HospitalEnCasa.App.FrontEnd.Pages
 {
     public class EditarMedicoModel : PageModel
     {

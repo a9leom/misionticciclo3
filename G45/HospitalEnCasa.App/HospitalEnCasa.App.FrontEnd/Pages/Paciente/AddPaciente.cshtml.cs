@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace HospitalEnCasa.App.FrontEnd
+namespace HospitalEnCasa.App.FrontEnd.Pages
 {
     public class AddPacienteModel : PageModel
     {

@@ -15,6 +15,8 @@ namespace HospitalEnCasa.app.Persistencia
         public DbSet<Familiar> Familiares { get; set; }
         public DbSet<Historia> Historias { get; set; }
         public DbSet<SignoVital> SignoVitales { get; set; }
+        public DbSet<Cita> Citas { get; set; }
+        public DbSet<Horario> Horarios { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             if (!options.IsConfigured)

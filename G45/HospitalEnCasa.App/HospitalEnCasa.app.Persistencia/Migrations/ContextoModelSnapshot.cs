@@ -62,6 +62,40 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.ToTable("Anotaciones");
                 });
 
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Cita", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Dia")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Hora")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("MedicoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PacienteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sala")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MedicoId");
+
+                    b.HasIndex("PacienteId");
+
+                    b.ToTable("Citas");
+                });
+
             modelBuilder.Entity("HospitalEnCasa.app.Dominio.Historia", b =>
                 {
                     b.Property<int>("Id")
@@ -75,6 +109,32 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Historias");
+                });
+
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Horario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("Dia")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Hora_Final")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Hora_Inicio")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("MedicoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MedicoId");
+
+                    b.ToTable("Horarios");
                 });
 
             modelBuilder.Entity("HospitalEnCasa.app.Dominio.Persona", b =>
@@ -258,6 +318,28 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
                     b.Navigation("signosVital");
                 });
 
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Cita", b =>
+                {
+                    b.HasOne("HospitalEnCasa.app.Dominio.Medico", "Medico")
+                        .WithMany()
+                        .HasForeignKey("MedicoId");
+
+                    b.HasOne("HospitalEnCasa.app.Dominio.Paciente", "Paciente")
+                        .WithMany()
+                        .HasForeignKey("PacienteId");
+
+                    b.Navigation("Medico");
+
+                    b.Navigation("Paciente");
+                });
+
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Horario", b =>
+                {
+                    b.HasOne("HospitalEnCasa.app.Dominio.Medico", null)
+                        .WithMany("Horarios")
+                        .HasForeignKey("MedicoId");
+                });
+
             modelBuilder.Entity("HospitalEnCasa.app.Dominio.Paciente", b =>
                 {
                     b.HasOne("HospitalEnCasa.app.Dominio.Enfermera", "enfermera")
@@ -282,6 +364,11 @@ namespace HospitalEnCasa.app.Persistencia.Migrations
             modelBuilder.Entity("HospitalEnCasa.app.Dominio.Historia", b =>
                 {
                     b.Navigation("anotaciones");
+                });
+
+            modelBuilder.Entity("HospitalEnCasa.app.Dominio.Medico", b =>
+                {
+                    b.Navigation("Horarios");
                 });
 #pragma warning restore 612, 618
         }

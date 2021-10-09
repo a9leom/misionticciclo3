@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace HospitalEnCasa.App.FrontEnd
+namespace HospitalEnCasa.App.FrontEnd.Pages
 {
     public class EditPacienteModel : PageModel
     {

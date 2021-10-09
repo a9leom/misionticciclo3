@@ -17,6 +17,8 @@ namespace HospitalEnCasa.app.Persistencia{
         {
             medico.password = security.GetMD5Hash(medico.password);
             var medicoAdd = _contexto.Add(medico).Entity;
+
+            medico.Horarios = new List<Horario>();
             _contexto.SaveChanges();
             return medicoAdd;
         }
@@ -45,12 +47,12 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public IEnumerable<Medico> getMedicos()
         {
-            return _contexto.Medicos;
+            return _contexto.Medicos.Include("Horarios");
         }
 
         public Medico obtenerMedico(int cedula)
         {
-            var medicoEncontrado = _contexto.Medicos.Where(x => x.cedula == cedula).FirstOrDefault();
+            var medicoEncontrado = _contexto.Medicos.Include("Horarios").Where(x => x.cedula == cedula).FirstOrDefault();
             return medicoEncontrado;
         }
 

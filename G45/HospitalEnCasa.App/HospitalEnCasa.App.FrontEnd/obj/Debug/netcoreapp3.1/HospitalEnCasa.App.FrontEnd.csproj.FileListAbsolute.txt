@@ -103,3 +103,7 @@ D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj
 D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Anotacion\ListAnotacion.cshtml.g.cs
 D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Historia\DetailHistoria.cshtml.g.cs
 D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Historia\ListHistoria.cshtml.g.cs
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Cita\AddCita.cshtml.g.cs
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Cita\ListCita.cshtml.g.cs
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\AddHorario.cshtml.g.cs
+D:\Mintic\misionticciclo3\G45\HospitalEnCasa.App\HospitalEnCasa.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\ListHorario.cshtml.g.cs
