@@ -24,7 +24,18 @@ namespace HospitalEnCasa.App.FrontEnd
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddRazorPages(
+                options => {
+                    options.Conventions.AuthorizeFolder("/Anotacion");
+                    options.Conventions.AuthorizeFolder("/Cita");
+                    options.Conventions.AuthorizeFolder("/Enfermera");
+                    options.Conventions.AuthorizeFolder("/Familiar");
+                    options.Conventions.AuthorizeFolder("/Historia");
+                    options.Conventions.AuthorizeFolder("/Medicos");
+                    options.Conventions.AuthorizeFolder("/Paciente");
+                    options.Conventions.AllowAnonymousToPage("/Privacy");
+                }
+            );
             Contexto _contexto = new Contexto();
             services.AddSingleton<IRepositorioMedico>(new RepositorioMedico(_contexto));
             services.AddSingleton<IRepositorioPaciente>(new RepositorioPaciente(_contexto));
@@ -35,6 +46,7 @@ namespace HospitalEnCasa.App.FrontEnd
             services.AddSingleton<IRepositorioHistoria>(new RepositorioHistoria(_contexto));
             services.AddSingleton<IRepositorioCita>(new RepositorioCita(_contexto));
             services.AddSingleton<IRepositorioHorario>(new RepositorioHorario(_contexto));
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,11 +67,15 @@ namespace HospitalEnCasa.App.FrontEnd
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication(); 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Conference}/{action=Index}/{id?}"
+                );
                 endpoints.MapRazorPages();
             });
         }

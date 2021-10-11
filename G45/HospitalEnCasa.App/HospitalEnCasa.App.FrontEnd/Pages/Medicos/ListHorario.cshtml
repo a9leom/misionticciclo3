@@ -3,6 +3,7 @@
 @{
 }
 <h1>Horarios registrados</h1>
+
 <a class="btn btn-primary" asp-page="./AddHorario">Añadir Horario</a>
 <table class="table table-dark">
     <thead>
@@ -17,8 +18,8 @@
                 <tr>
                     <td>@medico.nombre</td>
                     <td>@horario.Dia</td>
-                    <td>@horario.Hora_Inicio.ToString("hh:mm")</td>
-                    <td>@horario.Hora_Final.ToString("hh:mm")</td>
+                    <td>@horario.Hora_Inicio.ToString("hh:mm tt")</td>
+                    <td>@horario.Hora_Final.ToString("hh:mm tt")</td>
                 </tr>
             }
         }

@@ -10,8 +10,11 @@ namespace HospitalEnCasa.app.Persistencia{
         Historia addHistoria(Historia historia);
         void RemoveHistoria(int Id);
 
-        Historia getHistoriaByPaciente(Paciente paciente);
-        Historia getHistoriaByMedico(Medico medico);
-        Historia getHistoriaByPacienteAndFecha(Paciente paciente,DateTime fecha_inicio,DateTime fecha_final);
+        IEnumerable<Historia> getHistoriaByPaciente(Paciente paciente);
+        IEnumerable<Historia> getHistoriaByMedico(Medico medico);
+
+        IEnumerable<Historia> getHistoriaByEnfermera(Enfermera enfermera);
+
+        Historia getHistoriaByOnePaciente(Paciente Paciente);
     }
 }

@@ -31,7 +31,7 @@ namespace HospitalEnCasa.app.Persistencia{
 
         public IEnumerable<Historia> getAllHistorias()
         {
-            return _contexto.Historias;
+            return _contexto.Historias.Include("anotaciones").Include("anotaciones.medico").Include("anotaciones.paciente").Include("anotaciones.enfermera").Include("anotaciones.signosVital");
         }
 
         public Historia getHistoria(int Id)
@@ -39,20 +39,18 @@ namespace HospitalEnCasa.app.Persistencia{
             return _contexto.Historias.FirstOrDefault(h => h.Id == Id);
         }
 
-        public Historia getHistoriaByMedico(Medico medico)
+        public IEnumerable<Historia> getHistoriaByMedico(Medico medico)
         {
-            return _contexto.Historias.Include("anotaciones").FirstOrDefault(h => h.anotaciones.All(a => a.medico.Id == medico.Id));
+            return _contexto.Historias.Include("anotaciones").Include("anotaciones.medico").Include("anotaciones.paciente").Include("anotaciones.enfermera").Include("anotaciones.signosVital").Where(h => h.anotaciones.Any(a => a.medico.Id == medico.Id));
 
         }
 
-        public Historia getHistoriaByPaciente(Paciente paciente)
+        public IEnumerable<Historia> getHistoriaByPaciente(Paciente paciente)
         {
-            return _contexto.Historias.Include("anotaciones").FirstOrDefault(h => h.anotaciones.All(a=>a.paciente.Id == paciente.Id));
+            return _contexto.Historias.Include("anotaciones").Include("anotaciones.medico").Include("anotaciones.paciente").Include("anotaciones.enfermera").Include("anotaciones.signosVital").Where(h => h.anotaciones.All(a=>a.paciente.Id == paciente.Id));
         }
-
-        public Historia getHistoriaByPacienteAndFecha(Paciente paciente, DateTime fecha_inicio, DateTime fecha_final)
-        {
-            return _contexto.Historias.Include("anotaciones").FirstOrDefault(h => h.anotaciones.All(a => a.paciente.Id == paciente.Id && a.fecha >= fecha_inicio && a.fecha<= fecha_final));
+        public  IEnumerable<Historia> getHistoriaByEnfermera(Enfermera enfermera){
+            return _contexto.Historias.Include("anotaciones").Include("anotaciones.medico").Include("anotaciones.paciente").Include("anotaciones.enfermera").Include("anotaciones.signosVital").Where(h => h.anotaciones.Any(a=>a.enfermera.Id == enfermera.Id));
         }
 
         public void RemoveHistoria(int Id)
@@ -62,6 +60,11 @@ namespace HospitalEnCasa.app.Persistencia{
                 _contexto.Historias.Remove(historiaEncontrada);
                 _contexto.SaveChanges();
             }
+        }
+
+        public Historia getHistoriaByOnePaciente(Paciente Paciente){
+            return _contexto.Historias.Include("anotaciones").Include("anotaciones.medico").Include("anotaciones.paciente").Include("anotaciones.enfermera").Include("anotaciones.signosVital").FirstOrDefault(h => h.anotaciones.All(a=>a.paciente.Id == Paciente.Id));
+
         }
     }
 }

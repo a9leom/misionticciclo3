@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Anotacion\\AddAnotacion.cshtml",
       "TargetPath": "Pages\\Anotacion\\AddAnotacion.cshtml",
       "FileKind": "mvc"
@@ -14419,6 +14424,11 @@
     {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Medicos\\CrearMedico.cshtml",
       "TargetPath": "Pages\\Medicos\\CrearMedico.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Medicos\\ListHorario.cshtml",
+      "TargetPath": "Pages\\Medicos\\ListHorario.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14442,8 +14452,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Medicos\\AddHorario.cshtml",
+      "TargetPath": "Pages\\Medicos\\AddHorario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14462,6 +14482,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Shared\\_LoginPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Cita\\ListCita.cshtml",
+      "TargetPath": "Pages\\Cita\\ListCita.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Medicos\\EditarMedico.cshtml",
       "TargetPath": "Pages\\Medicos\\EditarMedico.cshtml",
       "FileKind": "mvc"
@@ -14474,6 +14504,11 @@
     {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Historia\\DetailHistoria.cshtml",
       "TargetPath": "Pages\\Historia\\DetailHistoria.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Cita\\AddCita.cshtml",
+      "TargetPath": "Pages\\Cita\\AddCita.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14497,8 +14532,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Enfermera\\RemoveEnfermera.cshtml",
       "TargetPath": "Pages\\Enfermera\\RemoveEnfermera.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14519,6 +14569,16 @@
     {
       "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Pages\\Paciente\\EditPaciente.cshtml",
       "TargetPath": "Pages\\Paciente\\EditPaciente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Mintic\\misionticciclo3\\G45\\HospitalEnCasa.App\\HospitalEnCasa.App.FrontEnd\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {

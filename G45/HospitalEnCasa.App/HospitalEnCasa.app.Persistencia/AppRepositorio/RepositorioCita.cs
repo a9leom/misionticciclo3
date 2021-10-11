@@ -22,6 +22,7 @@ namespace HospitalEnCasa.app.Persistencia{
             /*
             1) El medico no debe tener una cita entre la hora de cita y 30 minutos después
             2) Una sala no puede tener una cita al mismo tiempo
+            3) Un paciente no puede tener dos citas al mismo tiempo
             */
             Cita citaCruzada = _contexto.Citas.FirstOrDefault(
                 c => c.Medico.Id == cita.Medico.Id &&
@@ -44,10 +45,24 @@ namespace HospitalEnCasa.app.Persistencia{
                 cita.Hora < c.Hora.AddMinutes(30)                
                 );
 
-            if(citaEspacio == null && citaCruzada == null && citaPaciente == null){
+            //Es consultar si el médico tiene disponibilidad en la hora la cita
+            int hora_cita = cita.Hora.Hour;
+            int cita_minuto = cita.Hora.Minute;
+
+            Medico Medico = _contexto.Medicos.FirstOrDefault(
+                m => m.Id == cita.Medico.Id && 
+                m.Horarios.Any(h => h.Dia == cita.Dia.DayOfWeek &&
+                        hora_cita >= h.Hora_Inicio.Hour &&
+                        cita_minuto >= h.Hora_Inicio.Minute &&
+                        hora_cita <= h.Hora_Final.AddMinutes(-30).Hour &&
+                        cita_minuto <= h.Hora_Final.AddMinutes(-30).Minute
+                    )
+            );
+
+            if(citaEspacio == null && citaCruzada == null && citaPaciente == null && Medico!=null && cita.Dia >= DateTime.Now){
                 Cita nuevaCita = _contexto.Add(cita).Entity;
                 _contexto.SaveChanges();
-                return nuevaCita;                
+                return nuevaCita;
             }
             else{
                 return null;

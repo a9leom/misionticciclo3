@@ -75,7 +75,7 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
                         signosVital = signosVital,
                     };
 
-                    Historia historia = repositorioHistoria.getHistoriaByPaciente(paciente);
+                    Historia historia = repositorioHistoria.getHistoriaByOnePaciente(paciente);
 
                     if(historia==null){
                         Historia historiaNueva = new Historia(){

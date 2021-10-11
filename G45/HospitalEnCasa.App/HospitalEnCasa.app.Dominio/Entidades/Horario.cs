@@ -6,7 +6,8 @@ namespace HospitalEnCasa.app.Dominio{
         [Key]
         public int Id { get; set; }
         
-        public Dia Dia { get; set; }
+        [Required]
+        public DayOfWeek Dia { get; set; }
         [Required,DataType(DataType.Time)]
         public DateTime Hora_Inicio { get; set; }
         [Required,DataType(DataType.Time)]

@@ -4,9 +4,28 @@
 }
 <h1>Gestión de historias clinicas</h1>
 <p>Seleccione la opción que desea consultar</p>
-<ul class="list-group">
-    <li class="list-group-item">Historia por paciente <select asp-for="cedula" asp-items="Model.pacientes" name="testSelect"></select> <a class="btn btn-primary" asp-page="./DetailHistoria" asp-route-cedula="@Model.cedula" asp-route-tipo="paciente">Listar</a></li>
-    <li class="list-group-item">Historia por médico <select asp-for="cedula" asp-items="Model.medicos"></select><a class="btn btn-primary" asp-page="./DetailHistoria" asp-route-cedula="@Model.cedula" asp-route-tipo="medico">Listar</a></li></li>
-    <li class="list-group-item">Historia por enfermera<select asp-for="@Model.cedula" asp-items="Model.enfermeras"></select><a class="btn btn-primary" asp-page="./DetailHistoria" asp-route-cedula="@Model.cedula" asp-route-tipo="enfermera">Listar</a></li></li>
-</ul>
+<form method="get" asp-page="./DetailHistoria" class="mt-3">
+    <input type=hidden asp-for="tipo" value="paciente">
+    <div class="form-group">        
+        <label asp-for="cedula" class="control-label">Historia por paciente</label>
+        <select asp-for="cedula" class="form-control" asp-items=@Model.pacientes></select>
+    </div>  
+    <button type="submit" class="btn btn-primary">Consultar</button>  
+</form>
+<form method="get" asp-page="./DetailHistoria" class="mt-3">
+    <input type=hidden asp-for="tipo" value="medico">
+    <div class="form-group">        
+        <label asp-for="cedula" class="control-label">Historia por Medico</label>
+        <select asp-for="cedula" class="form-control" asp-items=@Model.medicos></select>
+    </div>  
+    <button type="submit" class="btn btn-primary">Consultar</button>  
+</form>
+<form method="get" asp-page="./DetailHistoria" class="mt-3">
+    <input type=hidden asp-for="tipo" value="enfermera">
+    <div class="form-group">        
+        <label asp-for="cedula" class="control-label">Historia por Enfermera</label>
+        <select asp-for="cedula" class="form-control" asp-items=@Model.enfermeras></select>
+    </div>  
+    <button type="submit" class="btn btn-primary">Consultar</button>  
+</form>
 

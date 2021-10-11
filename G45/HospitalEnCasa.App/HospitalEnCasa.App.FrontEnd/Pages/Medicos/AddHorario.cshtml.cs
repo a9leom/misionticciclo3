@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using HospitalEnCasa.app.Dominio;
 using HospitalEnCasa.app.Persistencia;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace HospitalEnCasa.App.FrontEnd.Pages
 {
@@ -32,8 +33,14 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
         public IActionResult OnPost(Horario Horario, int CedulaMedico){
             Medico medico = repositorioMedico.obtenerMedico(CedulaMedico);
             if(ModelState.IsValid){
-                repositorioHorario.AddHorario(Horario, medico.Id);
-                return RedirectToPage("./ListHorario");
+                Horario HorarioNuevo = repositorioHorario.AddHorario(Horario, medico.Id);
+                if(HorarioNuevo != null){
+                    return RedirectToPage("./ListHorario");
+                }
+                else{
+                    ModelState.AddModelError(string.Empty,"El médico tiene un horario el mismo día");
+                    return Page();
+                }
             }
             else{
                 return Page();

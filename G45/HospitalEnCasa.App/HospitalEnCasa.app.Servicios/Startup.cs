@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using HospitalEnCasa.app.Persistencia;
 
 namespace HospitalEnCasa.app.Servicios
 {
@@ -25,7 +26,10 @@ namespace HospitalEnCasa.app.Servicios
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Contexto _contexto = new Contexto();
             services.AddControllers();
+            services.AddSingleton<IRepositorioHistoria>(new RepositorioHistoria(_contexto));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
