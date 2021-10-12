@@ -20,6 +20,7 @@ namespace HospitalEnCasa.App.FrontEnd.Areas.Identity
                         context.Configuration.GetConnectionString("IdentityDataContextConnection")));
 
                 services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                    .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<IdentityDataContext>();
             });
         }

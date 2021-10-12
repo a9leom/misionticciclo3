@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HospitalEnCasa.app.Persistencia;
+using HospitalEnCasa.App.FrontEnd.Areas.Identity.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -51,7 +53,7 @@ namespace HospitalEnCasa.App.FrontEnd
             services.AddSingleton<IRepositorioAnotacion>(new RepositorioAnotacion(_context));
             services.AddSingleton<IRepositorioHistoria>(new RepositorioHistoria(_context));
             services.AddSingleton<IRepositorioCita>(new RepositorioCita(_context));
-            
+
             services.AddControllersWithViews();
 
         }

@@ -16,7 +16,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-
+using Microsoft.VisualBasic;
 
 namespace HospitalEnCasa.App.FrontEnd.Pages
 {
@@ -37,7 +37,8 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
         UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<CrearMedicoModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender, 
+            RoleManager<IdentityRole> roleManager)
         {
             this.repositorioMedico = repositorioMedico;
             Medico medico = new Medico();
@@ -45,7 +46,7 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
-            //this.roleManager = rolemgr;
+            this.roleManager = roleManager;
 
         }
         public void OnGet()
@@ -68,7 +69,7 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
                     var result = await _userManager.CreateAsync(user, Password);
 
 
-                    /*var rolExiste = await roleManager.RoleExistsAsync("Medico");
+                    var rolExiste = await roleManager.RoleExistsAsync("Medico");
 
                     if (!rolExiste)
                     {
@@ -77,7 +78,7 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
                             Name = "Medico"
                         };
                         await roleManager.CreateAsync(role);
-                    }*/
+                    }
 
 
                     if (result.Succeeded)
@@ -95,15 +96,13 @@ namespace HospitalEnCasa.App.FrontEnd.Pages
                         await _emailSender.SendEmailAsync(medico.email, "Confirm your email",
                             $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
-                        await _userManager.AddToRoleAsync(user, "Medico");
-
+                        var roleresult = await _userManager.AddToRoleAsync(user,"Medico").ConfigureAwait(false);
                         if (_userManager.Options.SignIn.RequireConfirmedAccount)
                         {
                             return RedirectToPage("RegisterConfirmation", new { email = medico.email, returnUrl = returnUrl });
                         }
                         else
-                        {
-                            await _signInManager.SignInAsync(user, isPersistent: false);
+                        {   
                             return LocalRedirect(returnUrl);
                         }
                     }
