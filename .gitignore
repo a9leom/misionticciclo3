@@ -23,6 +23,7 @@ Obj/
 **/Obj/
 **/obj/
 **/Migrations/
+**/migrations/
 Migrations/
 # build folder is nowadays used for build scripts and should not be ignored
 #build/
