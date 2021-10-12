@@ -26,38 +26,54 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/GestorMedicos/ListMedico">Gestionar
-                            médicos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area=""
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/GestorMedicos/ListMedico">Gestionar
+                                médicos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area=""
                             asp-page="/GestorEnfermeras/ListarEnfermeras">Gestionar enfermeras</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/GestorFamiliares/ListFamiliar">Gestionar
-                            familiares</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/GestorPacientes/ListPaciente">Gestionar
-                            pacientes</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/GestorFamiliares/ListFamiliar">Gestionar
+                                familiares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/GestorPacientes/ListPaciente">Gestionar
+                                pacientes</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Historia médicas
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/GestorAnotaciones/ListAnotacion">Gestionar anotación</a>
-                            <a class="dropdown-item" href="/GestorHistorias/ListHistoria">Gestionar historias</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/GestorCitas/ListCita">Gestionar citas</a>
+                                Historia médicas
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/GestorAnotaciones/ListAnotacion">Gestionar anotación</a>
+                                <a class="dropdown-item" href="/GestorHistorias/ListHistoria">Gestionar historias</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/GestorCitas/ListCita">Gestionar citas</a>
 
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                    </li>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
+                            asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                <button type="submit" class="btn btn-primary">Cerrar sesión</button>
+                            </form>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a href="/Identity/Account/Login" class="btn btn-primary">Login</a>
+                        </li>
+                    }
                 </ul>
             </div>
         </nav>

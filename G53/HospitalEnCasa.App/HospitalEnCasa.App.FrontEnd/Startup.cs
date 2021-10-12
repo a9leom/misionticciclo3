@@ -6,6 +6,10 @@ using HospitalEnCasa.app.Persistencia;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,7 +28,20 @@ namespace HospitalEnCasa.App.FrontEnd
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddRazorPages(
+                options =>
+                {
+                    options.Conventions.AuthorizeFolder("/GestorAnotaciones");
+                    options.Conventions.AuthorizeFolder("/GestorCitas");
+                    options.Conventions.AuthorizeFolder("/GestorEnfermeras");
+                    options.Conventions.AuthorizeFolder("/GestorHistorias");
+                    options.Conventions.AuthorizeFolder("/GestorMedicos");
+                    options.Conventions.AuthorizeFolder("/GestorPacientes");
+                    options.Conventions.AuthorizeFolder("/GestorFamiliares");
+                    options.Conventions.AllowAnonymousToPage("/Privacy");
+                    options.Conventions.AuthorizePage("/Index");
+                }
+            );
 
             Contexto _context = new Contexto();
             services.AddSingleton<IRepositorioMedico>(new RepositorioMedico(_context));
@@ -34,6 +51,9 @@ namespace HospitalEnCasa.App.FrontEnd
             services.AddSingleton<IRepositorioAnotacion>(new RepositorioAnotacion(_context));
             services.AddSingleton<IRepositorioHistoria>(new RepositorioHistoria(_context));
             services.AddSingleton<IRepositorioCita>(new RepositorioCita(_context));
+            
+            services.AddControllersWithViews();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,10 +75,15 @@ namespace HospitalEnCasa.App.FrontEnd
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Conference}/{action=Index}/{id?}"
+                );
                 endpoints.MapRazorPages();
             });
         }
