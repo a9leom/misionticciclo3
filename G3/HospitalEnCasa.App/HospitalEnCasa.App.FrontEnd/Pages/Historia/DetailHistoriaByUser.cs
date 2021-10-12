@@ -12,20 +12,20 @@ using Microsoft.Extensions.Logging;
 namespace HospitalEnCasa.App.FrontEnd.Pages
 {
     [Authorize(Roles = "Paciente,Medico,Enfermera,Admin")]
-    public class DetailHistoriaModel : PageModel
+    public class DetailHistoriaByUser : PageModel
     {
         private readonly IRepositorioHistoria repositorioHistoria;
         public Historia Historia {get; set; }
         private readonly ILogger<DetailHistoriaModel> _logger;
 
-        public DetailHistoriaModel(IRepositorioHistoria repositorio, ILogger<DetailHistoriaModel> logger){
+        public DetailHistoriaByUser(IRepositorioHistoria repositorio, ILogger<DetailHistoriaModel> logger){
             this.repositorioHistoria = repositorio;
             _logger = logger;
         }
-        public void OnGet(int idHistoria)
+        public void OnGet(string username)
         {
-            _logger.LogInformation("Historia consultada");
-            Historia = repositorioHistoria.getHistoria(idHistoria);
+            _logger.LogInformation("Historia consultada para usuario "+username);
+            Historia = repositorioHistoria.getHistoriaByUser(username);        
             
         }
 

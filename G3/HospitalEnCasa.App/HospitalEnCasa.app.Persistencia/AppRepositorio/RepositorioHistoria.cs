@@ -40,7 +40,10 @@ namespace HospitalEnCasa.app.Persistencia{
         {
             return _contexto.historias.Include("anotaciones").Include("anotaciones.paciente").Include("anotaciones.signoVital").Include("anotaciones.medico").Include("anotaciones.enfermera").FirstOrDefault(h => h.Id == id);
         }
-
+        public Historia getHistoriaByUser(string username)
+        {
+            return _contexto.historias.Include("anotaciones").Include("anotaciones.paciente").Include("anotaciones.signoVital").Include("anotaciones.medico").Include("anotaciones.enfermera").FirstOrDefault(h => h.anotaciones.Any(a=> a.paciente.username.ToLower() == username.ToLower()));
+        }
         public IEnumerable<Historia> historiaPorEnfermera(Enfermera enfermera)
         {
             return _contexto.historias.Where(h => h.anotaciones.Any(a => a.enfermera.Id == enfermera.Id));

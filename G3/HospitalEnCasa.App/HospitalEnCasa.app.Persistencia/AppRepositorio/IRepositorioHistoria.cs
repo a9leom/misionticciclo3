@@ -13,8 +13,7 @@ namespace HospitalEnCasa.app.Persistencia{
         IEnumerable<Historia> historiaPorMedico(Medico medico);
         IEnumerable<Historia> historiaPorEnfermera(Enfermera enfermera);
         Historia historiaPorFechaYPaciente(DateTime fecha_inicio, DateTime fecha_final, Paciente paciente);
-
-        
+        Historia getHistoriaByUser(string username);
         
     }
 }

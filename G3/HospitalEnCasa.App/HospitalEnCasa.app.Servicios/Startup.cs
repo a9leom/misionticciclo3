@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HospitalEnCasa.app.Persistencia;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,8 @@ namespace HospitalEnCasa.app.Servicios
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            Contexto _context = new Contexto();
+            services.AddSingleton<IRepositorioMedico>(new RepositorioMedico(_context));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

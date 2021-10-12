@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using HospitalEnCasa.app.Dominio;
 using HospitalEnCasa.app.Persistencia;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace HospitalEnCasa.App.FrontEnd
 {
+    [Authorize(Roles = "Medico,Enfermera,Admin")]
     public class ListHistoriaModel : PageModel
     {
         private readonly IRepositorioHistoria repositorioHistoria;
