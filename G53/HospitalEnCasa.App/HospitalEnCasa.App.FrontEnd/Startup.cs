@@ -53,7 +53,6 @@ namespace HospitalEnCasa.App.FrontEnd
             services.AddSingleton<IRepositorioAnotacion>(new RepositorioAnotacion(_context));
             services.AddSingleton<IRepositorioHistoria>(new RepositorioHistoria(_context));
             services.AddSingleton<IRepositorioCita>(new RepositorioCita(_context));
-
             services.AddControllersWithViews();
 
         }
