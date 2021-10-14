@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using HospitalEnCasa.app.Dominio;
 using HospitalEnCasa.app.Persistencia;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -11,6 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HospitalEnCasa.App.FrontEnd.Pages
 {
+    [Authorize(Roles="Medico, Enfermera")]
     public class AddAnotacionModel : PageModel
     {
         private readonly IRepositorioMedico repositorioMedico;
